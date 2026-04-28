@@ -14,44 +14,42 @@ import {
 export default function App({ children }: { children?: unknown }) {
   return (
     <ThemeProvider defaultTheme="light">
-      <Container>
-        <header>
-          <Container>
-            <Navbar aria-label="Primary">
-              <NavBrand>
-                <Link href="/">
-                  <strong>Askr</strong>
-                </Link>
-              </NavBrand>
-              <NavGroup>
-                <NavLink href="/">Home</NavLink>
-                <NavLink href="/about">About</NavLink>
-                <NavLink href="/components">Components</NavLink>
-                <NavLink href="/charts">Charts</NavLink>
-              </NavGroup>
-              <NavGroup data-align="end">
-                <Link
-                  href="https://github.com/askrjs"
-                  aria-label="GitHub repository"
-                >
-                  <GitHubLogo size={16} />
-                </Link>
-                <ThemeToggle
-                  variant="ghost"
-                  size="icon"
-                  toggleThemes={["light", "dark"]}
-                  aria-label="Toggle color theme"
-                  lightIcon={<SunIcon size={16} aria-hidden="true" />}
-                  darkIcon={<MoonIcon size={16} aria-hidden="true" />}
-                />
-              </NavGroup>
-            </Navbar>
-          </Container>
-        </header>
-        <main>
-          <Container>{children}</Container>
-        </main>
-      </Container>
+      <header>
+        <Container>
+          <Navbar aria-label="Primary">
+            <NavBrand>
+              <Link href="/">
+                <strong>Askr</strong>
+              </Link>
+            </NavBrand>
+            <NavGroup>
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/about">About</NavLink>
+              <NavLink href="/components">Components</NavLink>
+              <NavLink href="/charts">Charts</NavLink>
+            </NavGroup>
+            <NavGroup data-align="end">
+              <a
+                href="https://github.com/askrjs"
+                aria-label="GitHub repository"
+              >
+                <GitHubLogo size={16} />
+              </a>
+              <ThemeToggle
+                variant="ghost"
+                size="icon"
+                toggleThemes={["light", "dark"]}
+                aria-label="Toggle color theme"
+                lightIcon={<SunIcon size={16} aria-hidden="true" />}
+                darkIcon={<MoonIcon size={16} aria-hidden="true" />}
+              />
+            </NavGroup>
+          </Navbar>
+        </Container>
+      </header>
+      <main>
+        <Container>{children}</Container>
+      </main>
     </ThemeProvider>
   );
 }

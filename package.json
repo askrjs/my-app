@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vp dev",
+    "prebuild": "npm --prefix ../askr-lucide run build",
     "build": "vp build",
     "preview": "vp preview",
     "test": "vp test run",

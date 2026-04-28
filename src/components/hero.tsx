@@ -22,9 +22,7 @@ type HeroActionsProps = Omit<JSX.IntrinsicElements['div'], 'children'> & {
 export default function Hero({ children }: HeroProps) {
   return (
     <Section>
-      <Stack gap="4">
-        {children}
-      </Stack>
+      <Stack gap="4">{children}</Stack>
     </Section>
   );
 }
@@ -37,8 +35,13 @@ export function HeroTitle({ children, ...rest }: HeroTitleProps) {
   return <h1 {...rest}>{children}</h1>;
 }
 
-export function HeroDescription({ children, class: className, ...rest }: HeroTextProps) {
-  const classes = [className, 'text-muted'].filter(Boolean).join(' ') || undefined;
+export function HeroDescription({
+  children,
+  class: className,
+  ...rest
+}: HeroTextProps) {
+  const classes =
+    [className, 'text-muted'].filter(Boolean).join(' ') || undefined;
   return (
     <p {...rest} class={classes}>
       {children}

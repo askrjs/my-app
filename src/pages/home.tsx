@@ -38,18 +38,16 @@ export default function Home() {
         </HeroActions>
         <Grid minItemWidth="12rem" gap="3">
           <div>
-              <strong>Simple routes</strong>
-              <span>One shared shell and four focused pages.</span>
+            <strong>Simple routes</strong>
+            <span>One shared shell and four focused pages.</span>
           </div>
           <div>
-              <strong>Real interactivity</strong>
-              <span>Small reactive controls and data switches.</span>
+            <strong>Real interactivity</strong>
+            <span>Small reactive controls and data switches.</span>
           </div>
           <div>
-              <strong>Workspace packages</strong>
-              <span>
-                askr-ui, askr-themes, and askr-charts working together.
-              </span>
+            <strong>Workspace packages</strong>
+            <span>askr-ui, askr-themes, and askr-charts working together.</span>
           </div>
         </Grid>
       </Hero>
