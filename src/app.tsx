@@ -40,15 +40,15 @@ export default function App({ children }: { children?: unknown }) {
                 href="https://github.com/askrjs"
                 aria-label="GitHub repository"
               >
-                <GitHubLogo size={16} />
+                <GitHubLogo size={20} />
               </a>
               <ThemeToggle
                 variant="ghost"
                 size="icon"
                 toggleThemes={["light", "dark"]}
                 aria-label="Toggle color theme"
-                lightIcon={<SunIcon size={16} aria-hidden="true" />}
-                darkIcon={<MoonIcon size={16} aria-hidden="true" />}
+                lightIcon={<SunIcon size={20} aria-hidden="true" />}
+                darkIcon={<MoonIcon size={20} aria-hidden="true" />}
               />
             </NavGroup>
           </Navbar>
