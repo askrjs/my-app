@@ -16,8 +16,17 @@ import {
   SparklesIcon,
   ToggleLeftIcon,
 } from '@askrjs/askr-lucide';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  Grid,
+  Inline,
+  Section,
+} from '@askrjs/askr-themes/components';
 import Counter from '../components/counter';
-import IconLabel from '../components/icon-label';
 
 export default function Components() {
   const name = state('');
@@ -25,40 +34,52 @@ export default function Components() {
 
   return (
     <>
-      <section class="page-header components-hero">
-        <div class="page-header-copy">
-          <p class="marketing-eyebrow">Components</p>
-          <h1>A few controls, a little state, nothing more.</h1>
-          <p class="marketing-lead text-muted">
-            This page keeps the demo intentionally small: tabs, accordion, and
-            one shared state value driving two controls.
-          </p>
-        </div>
-      </section>
+      <Section>
+        <section class="page-header components-hero">
+          <div class="page-header-copy">
+            <p class="marketing-eyebrow">Components</p>
+            <h1>A few controls, a little state, nothing more.</h1>
+            <p class="marketing-lead text-muted">
+              This page keeps the demo intentionally small: tabs, accordion,
+              and one shared state value driving two controls.
+            </p>
+          </div>
+        </section>
+      </Section>
 
       <Counter />
 
-      <div class="marketing-card-grid">
-        <div class="showcase-section panel">
-          <h3>
-            <IconLabel icon={<LayoutGridIcon size={16} />}>Tabs</IconLabel>
-          </h3>
+      <Section>
+        <Grid minItemWidth="18rem" gap="4">
+        <Card class="showcase-card" variant="raised">
+          <CardHeader>
+            <CardTitle>
+              <Inline as="span" align="center" gap="2">
+                <LayoutGridIcon size={16} />
+                <span>Tabs</span>
+              </Inline>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
           <Tabs defaultValue="reactive">
             <TabsList>
               <TabsTrigger value="reactive">
-                <IconLabel compact icon={<SparklesIcon size={14} />}>
-                  Reactive
-                </IconLabel>
+                <Inline as="span" align="center" gap="1">
+                  <SparklesIcon size={14} />
+                  <span>Reactive</span>
+                </Inline>
               </TabsTrigger>
               <TabsTrigger value="composition">
-                <IconLabel compact icon={<BookOpenIcon size={14} />}>
-                  Composition
-                </IconLabel>
+                <Inline as="span" align="center" gap="1">
+                  <BookOpenIcon size={14} />
+                  <span>Composition</span>
+                </Inline>
               </TabsTrigger>
               <TabsTrigger value="theme">
-                <IconLabel compact icon={<LayoutGridIcon size={14} />}>
-                  Theme
-                </IconLabel>
+                <Inline as="span" align="center" gap="1">
+                  <LayoutGridIcon size={14} />
+                  <span>Theme</span>
+                </Inline>
               </TabsTrigger>
             </TabsList>
             <TabsContent value="reactive">
@@ -80,12 +101,19 @@ export default function Components() {
               </p>
             </TabsContent>
           </Tabs>
-        </div>
+          </CardContent>
+        </Card>
 
-        <div class="showcase-section panel">
-          <h3>
-            <IconLabel icon={<ListIcon size={16} />}>Accordion</IconLabel>
-          </h3>
+        <Card class="showcase-card" variant="raised">
+          <CardHeader>
+            <CardTitle>
+              <Inline as="span" align="center" gap="2">
+                <ListIcon size={16} />
+                <span>Accordion</span>
+              </Inline>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
           <Accordion type="single" collapsible>
             <AccordionItem value="size">
               <AccordionHeader>
@@ -121,18 +149,25 @@ export default function Components() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-        </div>
-      </div>
+          </CardContent>
+        </Card>
+        </Grid>
+      </Section>
 
-      <div class="showcase-section panel">
-        <h3>
-          <IconLabel icon={<ToggleLeftIcon size={16} />}>
-            Shared state
-          </IconLabel>
-        </h3>
-        <p class="text-muted">
-          One state value drives both the toggle and the preview text.
-        </p>
+      <Section>
+        <Card class="showcase-card" variant="raised">
+          <CardHeader>
+            <CardTitle>
+              <Inline as="span" align="center" gap="2">
+                <ToggleLeftIcon size={16} />
+                <span>Shared state</span>
+              </Inline>
+            </CardTitle>
+            <CardDescription>
+              One state value drives both the toggle and the preview text.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
         <div class="example-controls">
           <Toggle pressed={bold()} onPress={() => bold.set((value) => !value)}>
             Bold
@@ -147,7 +182,9 @@ export default function Components() {
         <p style={`font-weight: ${bold() ? '700' : '400'}`}>
           {name() ? `Hi, ${name()}!` : 'Type a name to update the preview.'}
         </p>
-      </div>
+          </CardContent>
+        </Card>
+      </Section>
     </>
   );
 }

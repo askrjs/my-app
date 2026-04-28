@@ -1,7 +1,11 @@
 import { Link, type LinkProps } from '@askrjs/askr/router';
-import { Button } from '@askrjs/askr-ui/primitives/button';
-import type { ButtonProps } from '@askrjs/askr-ui/primitives/button';
-import { Cluster, Section, Stack } from '@askrjs/askr-themes/components';
+import {
+  Button,
+  Flex,
+  Section,
+  Stack,
+  type ButtonProps,
+} from '@askrjs/askr-themes/components';
 
 type HeroProps = {
   children?: unknown;
@@ -17,6 +21,14 @@ type HeroTitleProps = Omit<JSX.IntrinsicElements['h1'], 'children'> & {
 
 type HeroActionsProps = Omit<JSX.IntrinsicElements['div'], 'children'> & {
   children?: unknown;
+};
+
+type HeroButtonProps = Omit<LinkProps, 'children' | 'class'> & {
+  href: string;
+  children?: unknown;
+  class?: string;
+  variant?: ButtonProps['variant'];
+  size?: ButtonProps['size'];
 };
 
 export default function Hero({ children }: HeroProps) {
@@ -51,16 +63,30 @@ export function HeroDescription({
 
 export function HeroActions({ children, ...rest }: HeroActionsProps) {
   return (
-    <Cluster {...rest} gap="3">
+    <Flex {...rest} wrap="wrap" gap="3">
       {children}
-    </Cluster>
+    </Flex>
   );
 }
 
-export function HeroButton(props: ButtonProps) {
-  return <Button {...props} size={props.size ?? 'lg'} />;
-}
+export function HeroButton({
+  children,
+  class: className,
+  href,
+  variant = 'primary',
+  size = 'lg',
+  ...linkProps
+}: HeroButtonProps) {
+  const variantClass = variant ? `hero-button--${variant}` : undefined;
+  const classes = ['hero-button', variantClass, className]
+    .filter(Boolean)
+    .join(' ');
 
-export function HeroLink(props: LinkProps) {
-  return <Link {...props} />;
+  return (
+    <Button asChild variant={variant} size={size}>
+      <Link href={href} {...linkProps} class={classes}>
+        {children}
+      </Link>
+    </Button>
+  );
 }
