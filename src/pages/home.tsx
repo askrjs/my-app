@@ -1,35 +1,41 @@
 import { Link } from '@askrjs/askr/router';
-import { Button } from '@askrjs/askr-ui/primitives/button';
 import { ArrowRightIcon } from '@askrjs/askr-lucide/icons/arrow-right';
 import { BarChart3Icon } from '@askrjs/askr-lucide';
 import { BoxesIcon } from '@askrjs/askr-lucide';
 import { LayoutTemplateIcon } from '@askrjs/askr-lucide';
 import { Grid, Section } from '@askrjs/askr-themes/components';
 import FeatureCard from '../components/feature-card';
-import Hero from '../components/hero';
+import Hero, {
+  HeroActions,
+  HeroButton,
+  HeroDescription,
+  HeroEyebrow,
+  HeroLink,
+  HeroTitle,
+} from '../components/hero';
 
 export default function Home() {
   return (
     <>
-      <Hero
-        eyebrow="Simple Askr app"
-        title="A small app shell with a few real parts."
-        description={
-          '`my-app` is intentionally narrow: two simple landing pages, a small component demo, and a few interactive charts.'
-        }
-        actions={[
-          <Button asChild variant="primary" size="lg">
-            <Link href="/components">
+      <Hero>
+        <HeroEyebrow>Simple Askr app</HeroEyebrow>
+        <HeroTitle>A small app shell with a few real parts.</HeroTitle>
+        <HeroDescription>
+          `my-app` is intentionally narrow: two simple landing pages, a small
+          component demo, and a few interactive charts.
+        </HeroDescription>
+        <HeroActions>
+          <HeroButton asChild variant="primary">
+            <HeroLink href="/components">
               View components <ArrowRightIcon size={16} />
-            </Link>
-          </Button>,
-          <Button asChild variant="secondary" size="lg">
-            <Link href="/charts">
+            </HeroLink>
+          </HeroButton>
+          <HeroButton asChild variant="secondary">
+            <HeroLink href="/charts">
               <BarChart3Icon size={16} /> View charts
-            </Link>
-          </Button>,
-        ]}
-      >
+            </HeroLink>
+          </HeroButton>
+        </HeroActions>
         <Grid minItemWidth="12rem" gap="3">
           <div>
               <strong>Simple routes</strong>
