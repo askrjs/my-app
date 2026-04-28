@@ -11,6 +11,7 @@ import {
   NavBrand,
   Navbar,
   NavGroup,
+  NavItem,
   Separator,
   Stack,
   ThemeProvider,
@@ -36,19 +37,20 @@ export default function App({ children }: { children?: unknown }) {
               <NavLink href="/about">About</NavLink>
             </NavGroup>
             <NavGroup data-align="end">
-              <a
+              <NavItem
                 href="https://github.com/askrjs"
                 aria-label="GitHub repository"
+                variant="icon"
               >
-                <GitHubLogo size={20} />
-              </a>
+                <GitHubLogo size={24} />
+              </NavItem>
               <ThemeToggle
                 variant="ghost"
                 size="icon"
                 toggleThemes={["light", "dark"]}
                 aria-label="Toggle color theme"
-                lightIcon={<SunIcon size={20} aria-hidden="true" />}
-                darkIcon={<MoonIcon size={20} aria-hidden="true" />}
+                lightIcon={<SunIcon size={24} aria-hidden="true" />}
+                darkIcon={<MoonIcon size={24} aria-hidden="true" />}
               />
             </NavGroup>
           </Navbar>
