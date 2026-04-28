@@ -4,6 +4,7 @@ import { NavLink } from "@askrjs/askr-ui";
 import {
   Container,
   GitHubLogo,
+  Header,
   NavBrand,
   Navbar,
   NavGroup,
@@ -14,7 +15,7 @@ import {
 export default function App({ children }: { children?: unknown }) {
   return (
     <ThemeProvider defaultTheme="light">
-      <header>
+      <Header position="sticky">
         <Container>
           <Navbar aria-label="Primary">
             <NavBrand>
@@ -46,7 +47,7 @@ export default function App({ children }: { children?: unknown }) {
             </NavGroup>
           </Navbar>
         </Container>
-      </header>
+      </Header>
       <main>
         <Container>{children}</Container>
       </main>
