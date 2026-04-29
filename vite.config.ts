@@ -1,8 +1,8 @@
-import { resolve } from 'node:path';
+﻿import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { defineConfig } from 'vite-plus';
-import { askr } from '@askrjs/askr-vite';
+import { askr } from '@askrjs/vite';
 
 const askrUiSrc = fileURLToPath(new URL('../askr-ui/src', import.meta.url));
 const askrThemesSrc = fileURLToPath(
@@ -18,15 +18,15 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@askrjs/askr-ui/foundations',
+        find: '@askrjs/ui/foundations',
         replacement: resolve(askrUiSrc, 'foundations/index.ts'),
       },
       {
-        find: '@askrjs/askr-ui/primitives',
+        find: '@askrjs/ui/primitives',
         replacement: resolve(askrUiSrc, 'components/primitives'),
       },
       {
-        find: '@askrjs/askr-ui/composites',
+        find: '@askrjs/ui/composites',
         replacement: resolve(askrUiSrc, 'components/composites'),
       },
       {
@@ -34,7 +34,7 @@ export default defineConfig({
         replacement: resolve(askrUiSrc, 'index.ts'),
       },
       {
-        find: '@askrjs/askr-themes/components',
+        find: '@askrjs/themes/components',
         replacement: resolve(askrThemesSrc, 'components/index.ts'),
       },
       {
@@ -42,7 +42,7 @@ export default defineConfig({
         replacement: resolve(askrThemesSrc, 'themes/default/index.css'),
       },
       {
-        find: '@askrjs/askr-charts/components',
+        find: '@askrjs/charts/components',
         replacement: resolve(askrChartsSrc, 'components/index.ts'),
       },
     ],
@@ -51,10 +51,10 @@ export default defineConfig({
   optimizeDeps: {
     exclude: [
       '@askrjs/askr',
-      '@askrjs/askr-ui',
-      '@askrjs/askr-themes',
-      '@askrjs/askr-charts',
-      '@askrjs/askr-lucide',
+      '@askrjs/ui',
+      '@askrjs/themes',
+      '@askrjs/charts',
+      '@askrjs/lucide',
     ],
   },
   lint: {
@@ -83,3 +83,4 @@ export default defineConfig({
     sourcemap: true,
   },
 });
+

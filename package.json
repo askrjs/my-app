@@ -15,13 +15,13 @@
   },
   "dependencies": {
     "@askrjs/askr": "file:../askr",
-    "@askrjs/askr-charts": "file:../askr-charts",
-    "@askrjs/askr-ui": "file:../askr-ui",
-    "@askrjs/askr-themes": "file:../askr-themes",
-    "@askrjs/askr-lucide": "file:../askr-lucide"
+    "@askrjs/charts": "file:../askr-charts",
+    "@askrjs/ui": "file:../askr-ui",
+    "@askrjs/themes": "file:../askr-themes",
+    "@askrjs/lucide": "file:../askr-lucide"
   },
   "devDependencies": {
-    "@askrjs/askr-vite": "file:../askr-vite",
+    "@askrjs/vite": "file:../askr-vite",
     "@types/node": "^25.6.0",
     "jiti": "^2.6.1",
     "jsdom": "^29.1.0",
