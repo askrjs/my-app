@@ -21,7 +21,7 @@
     "@askrjs/lucide": "file:../askr-lucide"
   },
   "devDependencies": {
-    "@askrjs/vite": "file:../askr-vite",
+    "@askrjs/vite": "0.0.1",
     "@types/node": "^25.6.0",
     "jiti": "^2.6.1",
     "jsdom": "^29.1.0",
