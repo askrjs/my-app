@@ -14,7 +14,7 @@
     "fmt": "vp fmt \"src/**/*.{ts,tsx,css}\" \"tests/**/*.{ts,tsx}\" \"*.md\""
   },
   "dependencies": {
-    "@askrjs/askr": "file:../askr",
+    "@askrjs/askr": "^0.0.29",
     "@askrjs/charts": "file:../askr-charts",
     "@askrjs/ui": "file:../askr-ui",
     "@askrjs/themes": "file:../askr-themes",
