@@ -1,6 +1,5 @@
-﻿import { MoonIcon, SunIcon } from "@askrjs/lucide";
-import { Link } from "@askrjs/askr/router";
-import { NavLink } from "@askrjs/ui";
+import { MoonIcon, SunIcon } from '@askrjs/lucide';
+import { Link } from '@askrjs/askr/router';
 import {
   Badge,
   Container,
@@ -16,7 +15,7 @@ import {
   Stack,
   ThemeProvider,
   ThemeToggle,
-} from "@askrjs/themes/components";
+} from '@askrjs/themes/components';
 
 export default function App({ children }: { children?: unknown }) {
   const year = new Date().getFullYear();
@@ -32,9 +31,9 @@ export default function App({ children }: { children?: unknown }) {
               </Link>
             </NavBrand>
             <NavGroup data-align="center">
-              <NavLink href="/components">Components</NavLink>
-              <NavLink href="/charts">Charts</NavLink>
-              <NavLink href="/about">About</NavLink>
+              <NavItem href="/components">Components</NavItem>
+              <NavItem href="/charts">Charts</NavItem>
+              <NavItem href="/about">About</NavItem>
             </NavGroup>
             <NavGroup data-align="end">
               <NavItem
@@ -47,7 +46,7 @@ export default function App({ children }: { children?: unknown }) {
               <ThemeToggle
                 variant="ghost"
                 size="icon"
-                toggleThemes={["light", "dark"]}
+                toggleThemes={['light', 'dark']}
                 aria-label="Toggle color theme"
                 lightIcon={<SunIcon size={24} aria-hidden="true" />}
                 darkIcon={<MoonIcon size={24} aria-hidden="true" />}
@@ -131,4 +130,3 @@ export default function App({ children }: { children?: unknown }) {
     </ThemeProvider>
   );
 }
-

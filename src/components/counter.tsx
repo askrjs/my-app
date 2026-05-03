@@ -1,4 +1,4 @@
-﻿import { state, derive } from '@askrjs/askr';
+import { state, derive } from '@askrjs/askr';
 import {
   Button,
   Card,
@@ -44,4 +44,3 @@ export default function Counter() {
     </Card>
   );
 }
-

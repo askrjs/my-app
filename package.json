@@ -4,7 +4,6 @@
   "type": "module",
   "scripts": {
     "dev": "vp dev",
-    "prebuild": "npm --prefix ../askr-lucide run build",
     "build": "vp build",
     "preview": "vp preview",
     "test": "vp test run",
@@ -14,17 +13,17 @@
     "fmt": "vp fmt \"src/**/*.{ts,tsx,css}\" \"tests/**/*.{ts,tsx}\" \"*.md\""
   },
   "dependencies": {
-    "@askrjs/askr": ">=0.0.30 <0.1.0",
-    "@askrjs/charts": "file:../askr-charts",
-    "@askrjs/ui": "0.0.1",
-    "@askrjs/themes": "file:../askr-themes",
-    "@askrjs/lucide": "file:../askr-lucide"
+    "@askrjs/askr": "0.0.30",
+    "@askrjs/charts": "0.0.1",
+    "@askrjs/ui": "0.0.2",
+    "@askrjs/themes": "0.0.1",
+    "@askrjs/lucide": "0.0.1"
   },
   "devDependencies": {
-    "@askrjs/vite": "0.0.1",
+    "@askrjs/vite": "0.0.2",
     "@types/node": "^25.6.0",
     "jiti": "^2.6.1",
-    "jsdom": "^29.1.0",
+    "jsdom": "^29.1.1",
     "typescript": "^6.0.3",
     "vite-plus": "^0.1.20"
   }

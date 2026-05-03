@@ -44,4 +44,3 @@ tests/               # Vitest tests
 - Use askr-ui components instead of raw HTML for interactive elements
 - Style with `--ak-*` tokens, never `--pico-*` or hardcoded colors
 - Prettier + ESLint enforced
-

@@ -1,4 +1,4 @@
-﻿import { Link, type LinkProps } from '@askrjs/askr/router';
+import { Link, type LinkProps } from '@askrjs/askr/router';
 import {
   Button,
   Flex,
@@ -90,4 +90,3 @@ export function HeroButton({
     </Button>
   );
 }
-
