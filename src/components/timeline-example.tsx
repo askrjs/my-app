@@ -45,6 +45,7 @@ export default function TimelineExample({ animate, scenario }: TimelineExamplePr
       <CardContent>
         <Timeline
           animate={animate}
+          labelDensity="compact"
           label="Delivery milestones"
           summary="A compact timeline showing major delivery steps."
           data={scenario === 'launch' ? launchTimeline : scaleTimeline}

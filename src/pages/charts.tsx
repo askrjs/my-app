@@ -47,7 +47,7 @@ export default function Charts() {
 
   return (
     <>
-      <Section>
+      <Section key="charts-header">
         <PageHeader
           class="chart-page"
           eyebrow="Charts"
@@ -57,7 +57,7 @@ export default function Charts() {
         />
       </Section>
 
-      <Section>
+      <Section key="charts-controls">
         <Card class="chart-toolbar" padding="sm">
           <CardHeader class="chart-meta">
             <CardTitle>{totals().headline}</CardTitle>
@@ -98,20 +98,140 @@ export default function Charts() {
         </Card>
       </Section>
 
-      <Section>
-        <Grid minItemWidth="18rem" class="chart-grid" gap="4">
-          <AreaChartExample animate={animate()} scenario={scenario()} />
-          <BarChartExample animate={animate()} scenario={scenario()} />
-          <LineChartExample animate={animate()} scenario={scenario()} />
-          <DonutChartExample animate={animate()} scenario={scenario()} />
-          <StackedBarChartExample animate={animate()} scenario={scenario()} />
-          <SparklineExample animate={animate()} scenario={scenario()} />
-          <HeatmapExample animate={animate()} scenario={scenario()} />
-          <TimelineExample animate={animate()} scenario={scenario()} />
-          <FlameGraphExample animate={animate()} scenario={scenario()} />
-          <ProgressMeterExample animate={animate()} scenario={scenario()} />
-          <RadialGaugeExample animate={animate()} scenario={scenario()} />
-        </Grid>
+      <Section key="charts-reference">
+        <div class="chart-reference">
+          <section class="chart-contract" data-chart-contract="AreaChart">
+            <div class="chart-contract__copy">
+              <p class="page-header-eyebrow">AreaChart</p>
+              <h2>Filled trend over ordered points.</h2>
+              <p class="text-muted">
+                The filled series should read as continuous movement over time,
+                not as independent bars.
+              </p>
+            </div>
+            <AreaChartExample animate={animate()} scenario={scenario()} />
+          </section>
+
+          <section class="chart-contract" data-chart-contract="BarChart">
+            <div class="chart-contract__copy">
+              <p class="page-header-eyebrow">BarChart</p>
+              <h2>Discrete category comparison.</h2>
+              <p class="text-muted">
+                Bars compare labeled categories with stable tracks and truthful
+                zero values.
+              </p>
+            </div>
+            <BarChartExample animate={animate()} scenario={scenario()} />
+          </section>
+
+          <section class="chart-contract" data-chart-contract="LineChart">
+            <div class="chart-contract__copy">
+              <p class="page-header-eyebrow">LineChart</p>
+              <h2>Trend line across an ordered axis.</h2>
+              <p class="text-muted">
+                The stroke and connected points are the primary marks; it should
+                not depend on fill or bar-like stems.
+              </p>
+            </div>
+            <LineChartExample animate={animate()} scenario={scenario()} />
+          </section>
+
+          <section class="chart-contract" data-chart-contract="DonutChart">
+            <div class="chart-contract__copy">
+              <p class="page-header-eyebrow">DonutChart</p>
+              <h2>Circular part-to-whole composition.</h2>
+              <p class="text-muted">
+                Segments share a consistent ring and center void so the total
+                remains legible without tooltip dependence.
+              </p>
+            </div>
+            <DonutChartExample animate={animate()} scenario={scenario()} />
+          </section>
+
+          <section class="chart-contract" data-chart-contract="StackedBarChart">
+            <div class="chart-contract__copy">
+              <p class="page-header-eyebrow">StackedBarChart</p>
+              <h2>Segmented bars for composition.</h2>
+              <p class="text-muted">
+                Each row compares a total while preserving its internal segment
+                mix.
+              </p>
+            </div>
+            <StackedBarChartExample animate={animate()} scenario={scenario()} />
+          </section>
+
+          <section class="chart-contract" data-chart-contract="Sparkline">
+            <div class="chart-contract__copy">
+              <p class="page-header-eyebrow">Sparkline</p>
+              <h2>Tiny trend for dense UI.</h2>
+              <p class="text-muted">
+                The chart stays minimal: no axes, no legend, and no heavy
+                surrounding chrome.
+              </p>
+            </div>
+            <SparklineExample animate={animate()} scenario={scenario()} />
+          </section>
+
+          <section class="chart-contract" data-chart-contract="Heatmap">
+            <div class="chart-contract__copy">
+              <p class="page-header-eyebrow">Heatmap</p>
+              <h2>Intensity grid across two dimensions.</h2>
+              <p class="text-muted">
+                Equal cells and color intensity carry the meaning while missing
+                combinations stay explicit.
+              </p>
+            </div>
+            <HeatmapExample animate={animate()} scenario={scenario()} />
+          </section>
+
+          <section class="chart-contract" data-chart-contract="Timeline">
+            <div class="chart-contract__copy">
+              <p class="page-header-eyebrow">Timeline</p>
+              <h2>Compact ordered events.</h2>
+              <p class="text-muted">
+                Milestones should scan as a sequence with bounded rhythm, not as
+                a loose bulleted list.
+              </p>
+            </div>
+            <TimelineExample animate={animate()} scenario={scenario()} />
+          </section>
+
+          <section class="chart-contract" data-chart-contract="FlameGraph">
+            <div class="chart-contract__copy">
+              <p class="page-header-eyebrow">FlameGraph</p>
+              <h2>Hierarchical cost rectangles.</h2>
+              <p class="text-muted">
+                Width maps to cost and depth maps to hierarchy, with stable
+                resizing for product dashboards.
+              </p>
+            </div>
+            <FlameGraphExample animate={animate()} scenario={scenario()} />
+          </section>
+
+          <section class="chart-contract" data-chart-contract="ProgressMeter">
+            <div class="chart-contract__copy">
+              <p class="page-header-eyebrow">ProgressMeter</p>
+              <h2>Linear progress versus max.</h2>
+              <p class="text-muted">
+                A bounded track and proportional fill make the scalar value
+                readable at a glance.
+              </p>
+            </div>
+            <ProgressMeterExample animate={animate()} scenario={scenario()} />
+          </section>
+
+          <section class="chart-contract" data-chart-contract="RadialGauge">
+            <div class="chart-contract__copy">
+              <p class="page-header-eyebrow">RadialGauge</p>
+              <h2>Circular scalar gauge.</h2>
+              <p class="text-muted">
+                The dial shows one value against its max and should not read as
+                a multi-segment donut.
+              </p>
+            </div>
+            <RadialGaugeExample animate={animate()} scenario={scenario()} />
+          </section>
+        </div>
       </Section>
     </>
   );

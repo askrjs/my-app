@@ -35,7 +35,7 @@ export default function Components() {
 
   return (
     <>
-      <Section>
+      <Section key="components-header">
         <PageHeader
           class="components-hero"
           eyebrow="Components"
@@ -45,9 +45,9 @@ export default function Components() {
         />
       </Section>
 
-      <Counter />
+      <Counter key="components-counter" />
 
-      <Section>
+      <Section key="components-controls">
         <Grid minItemWidth="18rem" gap="4">
           <Card class="showcase-card" variant="raised">
             <CardHeader>
@@ -158,7 +158,7 @@ export default function Components() {
         </Grid>
       </Section>
 
-      <Section>
+      <Section key="components-shared-state">
         <Card class="showcase-card" variant="raised">
           <CardHeader>
             <CardTitle>
