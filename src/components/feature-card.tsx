@@ -1,3 +1,10 @@
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '@askrjs/themes/components';
+
 type FeatureCardProps = {
   icon: unknown;
   title: unknown;
@@ -10,12 +17,14 @@ export default function FeatureCard({
   children,
 }: FeatureCardProps) {
   return (
-    <article class="feature-card panel">
-      <div class="feature-card__icon">{icon}</div>
-      <div class="feature-card__copy">
-        <h3>{title}</h3>
+    <Card class="feature-card" variant="raised">
+      <CardHeader class="feature-card__header">
+        <div class="feature-card__icon">{icon}</div>
+        <CardTitle>{title}</CardTitle>
+      </CardHeader>
+      <CardContent class="feature-card__copy">
         <p>{children}</p>
-      </div>
-    </article>
+      </CardContent>
+    </Card>
   );
 }

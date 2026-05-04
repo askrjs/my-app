@@ -11,6 +11,7 @@ import {
   Navbar,
   NavGroup,
   NavItem,
+  NavLink,
   Separator,
   Stack,
   ThemeProvider,
@@ -31,9 +32,9 @@ export default function App({ children }: { children?: unknown }) {
               </Link>
             </NavBrand>
             <NavGroup data-align="center">
-              <NavItem href="/components">Components</NavItem>
-              <NavItem href="/charts">Charts</NavItem>
-              <NavItem href="/about">About</NavItem>
+              <NavLink href="/components">Components</NavLink>
+              <NavLink href="/charts">Charts</NavLink>
+              <NavLink href="/about">About</NavLink>
             </NavGroup>
             <NavGroup data-align="end">
               <NavItem

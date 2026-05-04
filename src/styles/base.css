@@ -4,6 +4,7 @@
 
 :where(html) {
   background: var(--ak-color-bg);
+  color-scheme: light dark;
 }
 
 body {
@@ -11,9 +12,9 @@ body {
   margin: 0;
   background:
     radial-gradient(
-      72rem 38rem at 50% -6%,
-      color-mix(in srgb, var(--ak-color-primary-soft) 95%, transparent) 0%,
-      transparent 60%
+      58rem 34rem at 50% -8%,
+      color-mix(in srgb, var(--ak-color-primary-soft) 84%, transparent) 0%,
+      transparent 62%
     ),
     var(--ak-color-bg);
   color: var(--ak-color-fg);
@@ -34,8 +35,8 @@ h3 {
 
 p {
   margin: 0;
-  max-inline-size: 68ch;
-  line-height: 1.7;
+  max-inline-size: 70ch;
+  line-height: 1.68;
 }
 
 code {
@@ -54,6 +55,6 @@ svg {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--ak-color-primary-soft) 88%, transparent);
+  background: color-mix(in srgb, var(--ak-color-primary-soft) 84%, transparent);
   color: var(--ak-color-text);
 }

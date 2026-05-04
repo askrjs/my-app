@@ -12,6 +12,7 @@ import {
   Section,
 } from '@askrjs/themes/components';
 import FeatureCard from '../components/feature-card';
+import PageHeader from '../components/page-header';
 import Hero, {
   HeroActions,
   HeroButton,
@@ -26,7 +27,7 @@ export default function Home() {
       <Hero>
         <div class="home-hero">
           <div class="home-hero__content">
-            <HeroEyebrow class="home-kicker">
+            <HeroEyebrow class="page-header-eyebrow">
               Build the app shape first
             </HeroEyebrow>
             <HeroTitle>
@@ -50,7 +51,7 @@ export default function Home() {
 
           <Card class="home-hero__artifact" variant="raised">
             <CardHeader class="home-hero__artifact-copy">
-              <p class="home-kicker">Example stack</p>
+              <p class="page-header-eyebrow">Example stack</p>
               <CardTitle>One shell, three surfaces.</CardTitle>
               <CardDescription>
                 A predictable app frame with routes for components, charting,
@@ -78,16 +79,13 @@ export default function Home() {
       </Hero>
 
       <Section>
-        <div class="page-header home-section-head">
-          <div class="page-header-copy">
-            <p class="home-kicker">What you can explore</p>
-            <h2>Three focused surfaces instead of one overloaded showcase.</h2>
-            <p class="text-muted">
-              The structure stays simple: one clear landing page, one component
-              page, and one chart page with enough interactivity to feel real.
-            </p>
-          </div>
-        </div>
+        <PageHeader
+          class="home-section-head"
+          eyebrow="What you can explore"
+          title="Three focused surfaces instead of one overloaded showcase."
+          description="The structure stays simple: one clear landing page, one component page, and one chart page with enough interactivity to feel real."
+          headingLevel="h2"
+        />
 
         <div class="home-card-grid">
           <FeatureCard
@@ -109,12 +107,12 @@ export default function Home() {
       </Section>
 
       <Section>
-        <div class="page-header home-section-head">
-          <div class="page-header-copy">
-            <p class="home-kicker">How it flows</p>
-            <h2>A calm sequence with one idea per section.</h2>
-          </div>
-        </div>
+        <PageHeader
+          class="home-section-head"
+          eyebrow="How it flows"
+          title="A calm sequence with one idea per section."
+          headingLevel="h2"
+        />
 
         <Grid minItemWidth="14rem" gap="4">
           <Card class="home-step" variant="raised">
@@ -147,7 +145,7 @@ export default function Home() {
       <Section>
         <Card class="home-proof" variant="raised">
           <div class="home-proof__copy">
-            <p class="home-kicker">Why this shape works</p>
+            <p class="page-header-eyebrow">Why this shape works</p>
             <h2>
               Enough product structure to feel intentional, not enough to feel
               bloated.
@@ -177,7 +175,7 @@ export default function Home() {
       <Section>
         <Card class="home-cta" variant="raised">
           <div class="home-cta__copy">
-            <p class="home-kicker">Start somewhere concrete</p>
+            <p class="page-header-eyebrow">Start somewhere concrete</p>
             <h2>Open the component demos, then look at the charts.</h2>
             <p class="text-muted">
               That path shows the app shell first, then the UI surface, then the

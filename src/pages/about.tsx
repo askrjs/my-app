@@ -7,32 +7,28 @@ import {
   Grid,
   Section,
 } from '@askrjs/themes/components';
+import PageHeader from '../components/page-header';
 
 export default function About() {
   return (
     <>
       <Section>
-        <div class="page-header about-hero">
-          <div class="page-header-copy">
-            <p class="marketing-eyebrow">About this app</p>
-            <h1>A starter-sized demo, not a framework tour.</h1>
-            <p class="marketing-lead text-muted">
-              The goal is to show how an Askr app can feel cohesive with a small
-              set of routes, components, and charts.
-            </p>
-          </div>
-        </div>
+        <PageHeader
+          class="about-hero"
+          eyebrow="About this app"
+          title="A starter-sized demo, not a framework tour."
+          description="The goal is to show how an Askr app can feel cohesive with a small set of routes, components, and charts."
+          headingLevel="h1"
+        />
       </Section>
 
       <Section>
-        <div class="page-header-copy">
-          <p class="marketing-eyebrow">Design direction</p>
-          <h2>Keep the pages useful, then stop.</h2>
-          <p class="text-muted">
-            Each page demonstrates one narrow idea instead of trying to document
-            every feature in the workspace.
-          </p>
-        </div>
+        <PageHeader
+          eyebrow="Design direction"
+          title="Keep the pages useful, then stop."
+          description="Each page demonstrates one narrow idea instead of trying to document every feature in the workspace."
+          headingLevel="h2"
+        />
 
         <Grid minItemWidth="14rem" gap="4">
           <Card class="about-card" variant="raised">
@@ -74,7 +70,7 @@ export default function About() {
         <Card class="about-summary" variant="raised">
           <CardHeader>
             <CardTitle>What this app is not</CardTitle>
-            <CardDescription class="marketing-lead">
+            <CardDescription class="page-header-description">
               It is not a component catalog, a style guide, or a complete
               charting showcase.
             </CardDescription>

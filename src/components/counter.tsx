@@ -16,7 +16,7 @@ export default function Counter() {
   return (
     <Card class="counter" variant="raised">
       <CardHeader class="counter__header">
-        <p class="marketing-eyebrow">Reactive state</p>
+        <p class="page-header-eyebrow">Reactive state</p>
         <CardTitle>One value, one derived label.</CardTitle>
         <CardDescription>
           <code>state()</code> drives the count. <code>derive()</code> keeps

@@ -27,6 +27,7 @@ import {
   Section,
 } from '@askrjs/themes/components';
 import Counter from '../components/counter';
+import PageHeader from '../components/page-header';
 
 export default function Components() {
   const name = state('');
@@ -35,16 +36,13 @@ export default function Components() {
   return (
     <>
       <Section>
-        <section class="page-header components-hero">
-          <div class="page-header-copy">
-            <p class="marketing-eyebrow">Components</p>
-            <h1>A few controls, a little state, nothing more.</h1>
-            <p class="marketing-lead text-muted">
-              This page keeps the demo intentionally small: tabs, accordion, and
-              one shared state value driving two controls.
-            </p>
-          </div>
-        </section>
+        <PageHeader
+          class="components-hero"
+          eyebrow="Components"
+          title="A few controls, a little state, nothing more."
+          description="This page keeps the demo intentionally small: tabs, accordion, and one shared state value driving two controls."
+          headingLevel="h1"
+        />
       </Section>
 
       <Counter />
