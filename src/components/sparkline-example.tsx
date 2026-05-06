@@ -32,7 +32,10 @@ const scaleSparkline = [
   { label: 'W5', value: 27 },
 ];
 
-export default function SparklineExample({ animate, scenario }: SparklineExampleProps) {
+export default function SparklineExample({
+  animate,
+  scenario,
+}: SparklineExampleProps) {
   return (
     <Card class="chart-card" padding="sm">
       <CardHeader>

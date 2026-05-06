@@ -32,7 +32,10 @@ const scaleArea = [
   { label: 'May', value: 56 },
 ];
 
-export default function AreaChartExample({ animate, scenario }: AreaChartExampleProps) {
+export default function AreaChartExample({
+  animate,
+  scenario,
+}: AreaChartExampleProps) {
   return (
     <Card class="chart-card" padding="sm">
       <CardHeader>

@@ -1,5 +1,11 @@
 import { Heatmap } from '@askrjs/charts/components';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/components';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@askrjs/themes/components';
 
 type ChartScenario = 'launch' | 'scale';
 
@@ -30,7 +36,10 @@ const scaleHeatmap = [
   { x: 'Thu', y: 'Week 2', value: 20 },
 ];
 
-export default function HeatmapExample({ animate, scenario }: HeatmapExampleProps) {
+export default function HeatmapExample({
+  animate,
+  scenario,
+}: HeatmapExampleProps) {
   return (
     <Card class="chart-card" padding="sm">
       <CardHeader>

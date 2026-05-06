@@ -17,18 +17,45 @@ type TimelineExampleProps = {
 };
 
 const launchTimeline = [
-  { label: 'Kickoff', value: 'Week 1', description: 'Start with a narrow scope.' },
-  { label: 'Prototype', value: 'Week 2', description: 'Get the first pass on screen.' },
-  { label: 'Pilot', value: 'Week 3', description: 'Validate the flow with users.' },
+  {
+    label: 'Kickoff',
+    value: 'Week 1',
+    description: 'Start with a narrow scope.',
+  },
+  {
+    label: 'Prototype',
+    value: 'Week 2',
+    description: 'Get the first pass on screen.',
+  },
+  {
+    label: 'Pilot',
+    value: 'Week 3',
+    description: 'Validate the flow with users.',
+  },
 ];
 
 const scaleTimeline = [
-  { label: 'Kickoff', value: 'Week 1', description: 'Start with a narrow scope.' },
-  { label: 'Prototype', value: 'Week 2', description: 'Get the first pass on screen.' },
-  { label: 'Rollout', value: 'Week 4', description: 'Broaden the surface carefully.' },
+  {
+    label: 'Kickoff',
+    value: 'Week 1',
+    description: 'Start with a narrow scope.',
+  },
+  {
+    label: 'Prototype',
+    value: 'Week 2',
+    description: 'Get the first pass on screen.',
+  },
+  {
+    label: 'Rollout',
+    value: 'Week 4',
+    description: 'Broaden the surface carefully.',
+  },
 ];
 
-export default function TimelineExample({ animate, scenario }: TimelineExampleProps) {
+export default function TimelineExample({
+  animate,
+  scenario,
+}: TimelineExampleProps) {
   return (
     <Card class="chart-card" padding="sm">
       <CardHeader>

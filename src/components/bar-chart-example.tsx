@@ -30,7 +30,10 @@ const scaleBar = [
   { label: 'Deploys', value: 44 },
 ];
 
-export default function BarChartExample({ animate, scenario }: BarChartExampleProps) {
+export default function BarChartExample({
+  animate,
+  scenario,
+}: BarChartExampleProps) {
   return (
     <Card class="chart-card" padding="sm">
       <CardHeader>

@@ -32,7 +32,10 @@ const scaleLine = [
   { label: 'Fri', value: 36 },
 ];
 
-export default function LineChartExample({ animate, scenario }: LineChartExampleProps) {
+export default function LineChartExample({
+  animate,
+  scenario,
+}: LineChartExampleProps) {
   return (
     <Card class="chart-card" padding="sm">
       <CardHeader>
