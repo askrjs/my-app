@@ -1,13 +1,7 @@
 import { BarChart3Icon, CompassIcon, PaletteIcon } from '@askrjs/lucide';
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Grid,
-  Section,
-} from '@askrjs/themes/components';
-import PageHeader from '../components/page-header';
+import { Block, Section } from '@askrjs/themes/layouts';
+import { Card, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/surfaces';
+import PageHeader from '../../components/shared/page-header';
 
 export default function About() {
   return (
@@ -30,30 +24,30 @@ export default function About() {
           headingLevel="h2"
         />
 
-        <Grid minItemWidth="14rem" gap="4">
+        <Block size="sm" gap="4">
           <Card class="about-card" variant="raised">
             <CardHeader>
-              <div class="feature-card__icon">{<CompassIcon size={16} />}</div>
+              <div class="icon-badge">{<CompassIcon size={16} />}</div>
               <CardTitle>Focused scope</CardTitle>
               <CardDescription>
-                Four routes keep the navigation clear and the content
-                intentionally small.
+                A few product routes plus one docs section keep the navigation
+                clear and the content intentionally small.
               </CardDescription>
             </CardHeader>
           </Card>
           <Card class="about-card" variant="raised">
             <CardHeader>
-              <div class="feature-card__icon">{<PaletteIcon size={16} />}</div>
+              <div class="icon-badge">{<PaletteIcon size={16} />}</div>
               <CardTitle>Shared shell</CardTitle>
               <CardDescription>
-                askr-themes provides the structure so the app can stay visually
-                consistent.
+                askr-themes provides both the product shell and the docs shell
+                so the app can stay visually consistent.
               </CardDescription>
             </CardHeader>
           </Card>
           <Card class="about-card" variant="raised">
             <CardHeader>
-              <div class="feature-card__icon">
+              <div class="icon-badge">
                 {<BarChart3Icon size={16} />}
               </div>
               <CardTitle>Real packages</CardTitle>
@@ -63,14 +57,14 @@ export default function About() {
               </CardDescription>
             </CardHeader>
           </Card>
-        </Grid>
+        </Block>
       </Section>
 
       <Section>
         <Card class="about-summary" variant="raised">
           <CardHeader>
             <CardTitle>What this app is not</CardTitle>
-            <CardDescription class="page-header-description">
+            <CardDescription class="section-header-description">
               It is not a component catalog, a style guide, or a complete
               charting showcase.
             </CardDescription>

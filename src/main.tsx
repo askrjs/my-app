@@ -6,11 +6,23 @@ import './styles.css';
 // Import routes (they auto-register)
 import './routes';
 
-// Create and start the SPA
-createSPA({
-  root: document.getElementById('app')!,
-  routes: getRoutes(),
-});
+const styleMode = new URLSearchParams(window.location.search).has('theme-only')
+  ? 'theme-only'
+  : 'app-custom';
 
-// Resolve initial route
-navigate(window.location.pathname);
+document.documentElement.dataset.styleMode = styleMode;
+
+async function bootstrap(): Promise<void> {
+  if (styleMode === 'app-custom') {
+    await import('./styles/app-custom.css');
+  }
+
+  createSPA({
+    root: document.getElementById('app')!,
+    routes: getRoutes(),
+  });
+
+  navigate(window.location.pathname);
+}
+
+void bootstrap();

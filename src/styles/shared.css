@@ -1,0 +1,38 @@
+.feature-card {
+  gap: 1rem;
+  height: 100%;
+}
+
+.feature-card__header {
+  align-content: start;
+}
+
+.feature-card__copy {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.feature-card__copy p {
+  color: var(--ak-color-text-muted);
+}
+
+.counter {
+  gap: 1.25rem;
+}
+
+.counter__header,
+.counter__body {
+  gap: 0.75rem;
+}
+
+.counter-value {
+  color: var(--ak-color-primary);
+  font-size: clamp(3.4rem, 2.6rem + 4vw, 5.4rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+.counter-parity {
+  color: var(--ak-color-text-muted);
+}

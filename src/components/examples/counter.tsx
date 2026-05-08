@@ -1,13 +1,7 @@
 import { state, derive } from '@askrjs/askr';
-import {
-  Button,
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Flex,
-} from '@askrjs/themes/components';
+import { Button } from '@askrjs/themes/controls';
+import { Inline } from '@askrjs/themes/layouts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/surfaces';
 
 export default function Counter() {
   const count = state(0);
@@ -16,7 +10,7 @@ export default function Counter() {
   return (
     <Card class="counter" variant="raised">
       <CardHeader class="counter__header">
-        <p class="page-header-eyebrow">Reactive state</p>
+        <p class="eyebrow">Reactive state</p>
         <CardTitle>One value, one derived label.</CardTitle>
         <CardDescription>
           <code>state()</code> drives the count. <code>derive()</code> keeps
@@ -26,7 +20,7 @@ export default function Counter() {
       <CardContent class="counter__body">
         <div class="counter-value">{count()}</div>
         <p class="counter-parity text-bold">{parity()}</p>
-        <Flex wrap="wrap" class="counter-controls">
+        <Inline wrap="wrap" gap="md">
           <Button
             variant="secondary"
             onPress={() => count.set((value) => Math.max(0, value - 1))}
@@ -39,7 +33,7 @@ export default function Counter() {
           >
             +
           </Button>
-        </Flex>
+        </Inline>
       </CardContent>
     </Card>
   );

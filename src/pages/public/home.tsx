@@ -1,25 +1,18 @@
 import { ArrowRightIcon } from '@askrjs/lucide/icons/arrow-right';
 import { BarChart3Icon } from '@askrjs/lucide';
-import { BoxesIcon } from '@askrjs/lucide';
+import { BookOpenIcon } from '@askrjs/lucide';
 import { LayoutTemplateIcon } from '@askrjs/lucide';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Grid,
-  Section,
-} from '@askrjs/themes/components';
-import FeatureCard from '../components/feature-card';
-import PageHeader from '../components/page-header';
+import { Block, Section } from '@askrjs/themes/layouts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/surfaces';
+import FeatureCard from '../../components/examples/home/feature-card';
+import PageHeader from '../../components/shared/page-header';
 import Hero, {
   HeroActions,
   HeroButton,
   HeroDescription,
   HeroEyebrow,
   HeroTitle,
-} from '../components/hero';
+} from '../../components/examples/home/hero';
 
 export default function Home() {
   return (
@@ -27,21 +20,21 @@ export default function Home() {
       <Hero>
         <div class="home-hero">
           <div class="home-hero__content">
-            <HeroEyebrow class="page-header-eyebrow">
+            <HeroEyebrow class="eyebrow">
               Build the app shape first
             </HeroEyebrow>
             <HeroTitle>
-              Components, charts, and theming that already feel like one
+              Docs, charts, and product pages that already feel like one
               product.
             </HeroTitle>
             <HeroDescription>
-              `my-app` is a compact Askr app shell with a real landing flow, a
-              focused component page, and interactive charts that prove the
+              `my-app` is a compact Askr app shell with a docs section, a few
+              top-nav product pages, and interactive charts that prove the
               packages work together without turning into a giant demo site.
             </HeroDescription>
             <HeroActions class="home-hero__actions">
-              <HeroButton href="/components" variant="primary">
-                Explore components <ArrowRightIcon size={16} />
+              <HeroButton href="/docs" variant="primary">
+                Explore docs <ArrowRightIcon size={16} />
               </HeroButton>
               <HeroButton href="/charts" variant="secondary">
                 <BarChart3Icon size={16} /> See charts
@@ -51,17 +44,17 @@ export default function Home() {
 
           <Card class="home-hero__artifact" variant="raised">
             <CardHeader class="home-hero__artifact-copy">
-              <p class="page-header-eyebrow">Example stack</p>
+              <p class="eyebrow">Example stack</p>
               <CardTitle>One shell, three surfaces.</CardTitle>
               <CardDescription>
-                A predictable app frame with routes for components, charting,
-                and lightweight product copy.
+                A predictable app frame with top-nav product pages, a docs
+                sidebar, and lightweight product copy.
               </CardDescription>
             </CardHeader>
             <CardContent class="home-hero__artifact-grid">
               <div class="home-hero__artifact-item">
-                <strong>Components</strong>
-                <span>Accessible primitives with theme-level polish.</span>
+                <strong>Docs</strong>
+                <span>Left-nav guides and component pages under one section.</span>
               </div>
               <div class="home-hero__artifact-item">
                 <strong>Charts</strong>
@@ -93,11 +86,11 @@ export default function Home() {
             title="Themed app shell"
           >
             Header, container rhythm, section spacing, and footer composition
-            give the app a stable frame before individual pages get fancy.
+            give the product pages a stable frame before individual routes get fancy.
           </FeatureCard>
-          <FeatureCard icon={<BoxesIcon size={16} />} title="Components">
-            Focus on a narrow set of primitives and patterns instead of turning
-            the app into a complete catalog.
+          <FeatureCard icon={<BookOpenIcon size={16} />} title="Docs section">
+            Model a believable documentation directory with its own sidebar and
+            enough content to feel intentional.
           </FeatureCard>
           <FeatureCard icon={<BarChart3Icon size={16} />} title="Charts">
             Show interactive data views with enough controls to prove the
@@ -114,7 +107,7 @@ export default function Home() {
           headingLevel="h2"
         />
 
-        <Grid minItemWidth="14rem" gap="4">
+        <Block size="sm" gap="4">
           <Card class="home-step" variant="raised">
             <span class="home-step__number">01</span>
             <CardTitle>Start with the frame</CardTitle>
@@ -139,13 +132,13 @@ export default function Home() {
               useful surface.
             </CardDescription>
           </Card>
-        </Grid>
+        </Block>
       </Section>
 
       <Section>
         <Card class="home-proof" variant="raised">
           <div class="home-proof__copy">
-            <p class="page-header-eyebrow">Why this shape works</p>
+            <p class="eyebrow">Why this shape works</p>
             <h2>
               Enough product structure to feel intentional, not enough to feel
               bloated.
@@ -158,15 +151,15 @@ export default function Home() {
           <div class="home-proof__stats">
             <div class="home-proof__stat">
               <strong>4</strong>
-              <span>focused routes</span>
-            </div>
-            <div class="home-proof__stat">
-              <strong>3</strong>
-              <span>workspace packages in play</span>
+              <span>top-level routes</span>
             </div>
             <div class="home-proof__stat">
               <strong>1</strong>
-              <span>shared shell</span>
+              <span>docs section</span>
+            </div>
+            <div class="home-proof__stat">
+              <strong>2</strong>
+              <span>layout modes</span>
             </div>
           </div>
         </Card>
@@ -175,16 +168,16 @@ export default function Home() {
       <Section>
         <Card class="home-cta" variant="raised">
           <div class="home-cta__copy">
-            <p class="page-header-eyebrow">Start somewhere concrete</p>
-            <h2>Open the component demos, then look at the charts.</h2>
+            <p class="eyebrow">Start somewhere concrete</p>
+            <h2>Open the docs section, then look at the charts.</h2>
             <p class="text-muted">
-              That path shows the app shell first, then the UI surface, then the
-              data surface without making the landing page do all the work.
+              That path shows the product shell first, then the docs layout,
+              then the data surface without making the landing page do all the work.
             </p>
           </div>
           <div class="home-cta__actions">
-            <HeroButton href="/components" variant="primary">
-              Go to components
+            <HeroButton href="/docs/components" variant="primary">
+              Go to component docs
             </HeroButton>
             <HeroButton href="/about" variant="ghost">
               Read about the app

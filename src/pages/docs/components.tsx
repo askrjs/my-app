@@ -16,18 +16,10 @@ import {
   SparklesIcon,
   ToggleLeftIcon,
 } from '@askrjs/lucide';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Grid,
-  Inline,
-  Section,
-} from '@askrjs/themes/components';
-import Counter from '../components/counter';
-import PageHeader from '../components/page-header';
+import { Block, Inline, Section } from '@askrjs/themes/layouts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/surfaces';
+import Counter from '../../components/examples/counter';
+import PageHeader from '../../components/shared/page-header';
 
 export default function Components() {
   const name = state('');
@@ -38,9 +30,9 @@ export default function Components() {
       <Section key="components-header">
         <PageHeader
           class="components-hero"
-          eyebrow="Components"
-          title="A few controls, a little state, nothing more."
-          description="This page keeps the demo intentionally small: tabs, accordion, and one shared state value driving two controls."
+          eyebrow="Docs / Components"
+          title="A few controls, a little state, documented in context."
+          description="This page keeps the demo intentionally small: tabs, accordion, and one shared state value driving two controls inside the docs shell."
           headingLevel="h1"
         />
       </Section>
@@ -48,7 +40,7 @@ export default function Components() {
       <Counter key="components-counter" />
 
       <Section key="components-controls">
-        <Grid minItemWidth="18rem" gap="4">
+        <Block size="md" gap="4">
           <Card class="showcase-card" variant="raised">
             <CardHeader>
               <CardTitle>
@@ -142,20 +134,35 @@ export default function Components() {
                 <AccordionItem value="styling">
                   <AccordionHeader>
                     <AccordionTrigger>
-                      What provides the styling?
+                      What provides the styling and nav behavior?
                     </AccordionTrigger>
                   </AccordionHeader>
                   <AccordionContent>
                     <p>
                       The components stay headless while askr-themes supplies
-                      the skin and layout primitives.
+                      the skin, layout primitives, and nav helpers like
+                      <code> NavLink</code> matching.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="navlink-match">
+                  <AccordionHeader>
+                    <AccordionTrigger>
+                      Why does Overview stop highlighting on this page?
+                    </AccordionTrigger>
+                  </AccordionHeader>
+                  <AccordionContent>
+                    <p>
+                      The docs sidebar uses <code>match="exact"</code> for the
+                      overview link, while deeper section links keep the default
+                      prefix matching. That lets one nav mix both behaviors.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
             </CardContent>
           </Card>
-        </Grid>
+        </Block>
       </Section>
 
       <Section key="components-shared-state">

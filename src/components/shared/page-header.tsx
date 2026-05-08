@@ -15,12 +15,12 @@ export default function PageHeader({
   class: className,
   headingLevel = 'h2',
 }: PageHeaderProps) {
-  const classes = ['page-header', className].filter(Boolean).join(' ');
+  const classes = ['section-header', className].filter(Boolean).join(' ');
 
   return (
     <header class={classes}>
-      <div class="page-header-copy">
-        {eyebrow ? <p class="page-header-eyebrow">{eyebrow}</p> : null}
+      <div class="section-header-copy">
+        {eyebrow ? <p class="eyebrow">{eyebrow}</p> : null}
         {title ? (
           headingLevel === 'h1' ? (
             <h1>{title}</h1>
@@ -29,7 +29,7 @@ export default function PageHeader({
           )
         ) : null}
         {description ? (
-          <p class="page-header-description text-muted">{description}</p>
+          <p class="section-header-description text-muted">{description}</p>
         ) : null}
       </div>
       {children}

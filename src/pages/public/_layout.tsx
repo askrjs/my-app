@@ -1,56 +1,51 @@
 import { MoonIcon, SunIcon } from '@askrjs/lucide';
+import { HamburgerIcon } from '@askrjs/lucide';
 import { Link } from '@askrjs/askr/router';
-import {
-  Badge,
-  Container,
-  Flex,
-  GitHubLogo,
-  Grid,
-  Header,
-  NavBrand,
-  Navbar,
-  NavGroup,
-  NavItem,
-  NavLink,
-  Separator,
-  Stack,
-  ThemeProvider,
-  ThemeToggle,
-} from '@askrjs/themes/components';
+import { Container, Flex, Block, Stack } from '@askrjs/themes/layouts';
+import { GitHubLogo } from '@askrjs/themes/logos';
+import { NavBrand, Navbar, NavGroup, NavItem, NavLink } from '@askrjs/themes/navs';
+import { Header } from '@askrjs/themes/shells';
+import { Badge, Separator } from '@askrjs/themes/surfaces';
+import { ThemeToggle } from '@askrjs/themes/theme';
 
-export default function App({ children }: { children?: unknown }) {
+export default function PublicLayout({ children }: { children?: unknown }) {
   const year = new Date().getFullYear();
 
   return (
-    <ThemeProvider defaultTheme="light">
+    <>
       <Header position="sticky">
         <Container>
-          <Navbar aria-label="Primary">
+          <Navbar
+            aria-label="Primary"
+            collapseBelow="md"
+            collapseLabel="Primary navigation"
+            collapseTrigger={<HamburgerIcon size={20} aria-hidden="true" />}
+          >
             <NavBrand>
               <Link href="/">
                 <strong>Askr</strong>
               </Link>
             </NavBrand>
-            <NavGroup data-align="center">
-              <NavLink href="/components">Components</NavLink>
+            <NavGroup align="center">
+              <NavLink href="/docs">Docs</NavLink>
               <NavLink href="/charts">Charts</NavLink>
               <NavLink href="/about">About</NavLink>
             </NavGroup>
-            <NavGroup data-align="end">
+            <NavGroup align="end">
               <NavItem
                 href="https://github.com/askrjs"
                 aria-label="GitHub repository"
                 variant="icon"
               >
-                <GitHubLogo size={24} />
+                <GitHubLogo size={20} />
               </NavItem>
               <ThemeToggle
                 variant="ghost"
                 size="icon"
-                toggleThemes={['light', 'dark']}
+                toggleThemes={["light", "dark"]}
                 aria-label="Toggle color theme"
-                lightIcon={<SunIcon size={24} aria-hidden="true" />}
-                darkIcon={<MoonIcon size={24} aria-hidden="true" />}
+                lightIcon={<SunIcon size={20} aria-hidden="true" />}
+                darkIcon={<MoonIcon size={20} aria-hidden="true" />}
               />
             </NavGroup>
           </Navbar>
@@ -61,7 +56,7 @@ export default function App({ children }: { children?: unknown }) {
       </main>
       <footer class="site-footer">
         <Container>
-          <Grid gap="lg" align="start">
+          <Block gap="lg" align="start">
             <Stack gap="md">
               <p class="text-bold text-muted">Askr ecosystem</p>
               <Link href="/" class="text-bold">
@@ -83,7 +78,7 @@ export default function App({ children }: { children?: unknown }) {
               <h3 class="text-bold">Explore</h3>
               <Stack asChild gap="none">
                 <nav aria-label="Footer explore">
-                  <Link href="/components">Components</Link>
+                  <Link href="/docs">Docs</Link>
                   <Link href="/charts">Charts</Link>
                   <Link href="/about">About</Link>
                 </nav>
@@ -118,7 +113,7 @@ export default function App({ children }: { children?: unknown }) {
                 </nav>
               </Stack>
             </Stack>
-          </Grid>
+          </Block>
 
           <Separator decorative />
 
@@ -128,6 +123,6 @@ export default function App({ children }: { children?: unknown }) {
           </Flex>
         </Container>
       </footer>
-    </ThemeProvider>
+    </>
   );
 }

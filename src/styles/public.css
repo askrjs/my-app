@@ -1,0 +1,216 @@
+.home-hero,
+.home-hero__artifact-copy,
+.home-hero__artifact-grid,
+.home-proof,
+.home-proof__copy,
+.home-proof__stats,
+.home-cta,
+.home-cta__copy,
+.about-summary {
+  display: grid;
+}
+
+.home-section-head,
+.about-hero {
+  gap: 0.9rem;
+}
+
+.home-hero {
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  gap: clamp(1.5rem, 1rem + 1.5vw, 3rem);
+  align-items: start;
+}
+
+.home-hero__content,
+.home-hero__artifact,
+.home-proof__copy,
+.home-cta__copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-proof__copy h2,
+.home-cta__copy h2 {
+  margin: 0;
+  color: var(--ak-color-text);
+  font-size: var(--ak-type-7-size);
+  font-weight: var(--ak-font-weight-bold);
+  letter-spacing: var(--ak-type-7-letter-spacing);
+  line-height: var(--ak-type-7-line-height);
+  text-wrap: balance;
+}
+
+.home-hero__actions {
+  gap: 0.95rem;
+}
+
+.hero-button {
+  --_button-height: 3.25rem;
+  --_button-padding-x: 1.15rem;
+  --_button-radius: 1rem;
+
+  font-size: 0.98rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.hero-button:where([data-slot='button']) {
+  gap: 0.55rem;
+}
+
+.hero-button:where([data-slot='button']) > * {
+  color: inherit;
+}
+
+.hero-button--primary:where([data-slot='button']) {
+  border-color: color-mix(
+    in srgb,
+    var(--ak-color-primary-active) 78%,
+    black 22%
+  );
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, white 8%, var(--ak-color-primary)) 0%,
+    var(--ak-color-primary) 100%
+  );
+  color: white;
+}
+
+.hero-button--primary:where([data-slot='button']:hover) {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, white 10%, var(--ak-color-primary-hover)) 0%,
+    var(--ak-color-primary-hover) 100%
+  );
+  border-color: var(--ak-color-primary-hover);
+}
+
+.hero-button--secondary:where([data-slot='button']) {
+  background: color-mix(in srgb, var(--ak-color-surface) 84%, white 16%);
+  border-color: color-mix(
+    in srgb,
+    var(--ak-color-border-strong) 72%,
+    white 28%
+  );
+  color: var(--ak-color-text);
+  box-shadow: none;
+}
+
+.hero-button--secondary:where([data-slot='button']:hover) {
+  background: color-mix(in srgb, var(--ak-color-surface-muted) 78%, white 22%);
+  border-color: var(--ak-color-border-strong);
+}
+
+.home-hero__artifact [data-slot='card-title'] {
+  font-size: clamp(1.45rem, 1.2rem + 1vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.home-hero__artifact-grid {
+  gap: 0;
+}
+
+.home-hero__artifact-item {
+  display: grid;
+  gap: 0.35rem;
+  padding-block: 0.85rem;
+  border-top: 1px solid
+    color-mix(in srgb, var(--ak-color-border-subtle) 88%, white 12%);
+}
+
+.home-hero__artifact-item:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.home-hero__artifact-item strong {
+  color: var(--ak-color-text);
+  font-size: 0.98rem;
+}
+
+.home-hero__artifact-item span {
+  color: var(--ak-color-text-muted);
+  line-height: 1.55;
+}
+
+.home-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.home-step {
+  gap: 0.8rem;
+  height: 100%;
+  align-content: start;
+}
+
+.home-step__number {
+  color: var(--ak-color-primary);
+  font-size: 0.82rem;
+  font-weight: var(--ak-font-weight-bold);
+  letter-spacing: 0.08em;
+}
+
+.home-proof {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.home-proof__stats {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.home-proof__stat {
+  gap: 0.35rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--ak-color-surface-alt) 72%, transparent);
+  text-align: left;
+}
+
+.home-proof__stat strong {
+  color: var(--ak-color-text);
+  font-size: clamp(1.8rem, 1.5rem + 1vw, 2.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.home-proof__stat span {
+  color: var(--ak-color-text-muted);
+  font-size: 0.92rem;
+}
+
+.home-cta {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.home-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: flex-end;
+}
+
+.about-card {
+  height: 100%;
+}
+
+@media (max-width: 48rem) {
+  .home-hero,
+  .home-card-grid,
+  .home-proof,
+  .home-proof__stats,
+  .home-cta {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .home-cta__actions {
+    justify-content: flex-start;
+  }
+}

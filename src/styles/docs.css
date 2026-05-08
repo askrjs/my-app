@@ -1,0 +1,32 @@
+.docs-page__grid,
+.docs-step-list {
+  display: grid;
+}
+
+.components-hero,
+.docs-hero {
+  gap: 0.9rem;
+}
+
+.docs-page__grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.docs-step-list {
+  width: min(100%, 56rem);
+  margin-inline: auto;
+}
+
+.docs-page__grid :where([data-slot='card-title']) {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+@media (max-width: 48rem) {
+  .docs-page__grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}

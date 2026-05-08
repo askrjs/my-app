@@ -1,13 +1,7 @@
 import { BarChart } from '@askrjs/charts/components';
 import { BarChart3Icon } from '@askrjs/lucide';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Inline,
-} from '@askrjs/themes/components';
+import { Inline } from '@askrjs/themes/layouts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/surfaces';
 
 type ChartScenario = 'launch' | 'scale';
 

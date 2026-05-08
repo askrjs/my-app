@@ -1,15 +1,18 @@
-import { group, registerRoutes, route } from '@askrjs/askr/router';
-import AppLayout from './app';
-import Home from './pages/home';
-import About from './pages/about';
-import Components from './pages/components';
-import Charts from './pages/charts';
+import { group, registerRoutes } from '@askrjs/askr/router';
+import RootLayout from './pages/_layout';
+import DocsLayout from './pages/docs/_layout';
+import { registerDocsRoutes } from './pages/docs/_routes';
+import PublicLayout from './pages/public/_layout';
+import { registerPublicRoutes } from './pages/public/_routes';
 
 registerRoutes(() => {
-  group({ layout: AppLayout }, () => {
-    route('/', Home);
-    route('/about', About);
-    route('/components', Components);
-    route('/charts', Charts);
+  group({ layout: RootLayout }, () => {
+    group({ layout: PublicLayout }, () => {
+      registerPublicRoutes();
+    });
+
+    group({ layout: DocsLayout }, () => {
+      registerDocsRoutes();
+    });
   });
 });

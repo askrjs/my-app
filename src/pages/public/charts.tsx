@@ -1,27 +1,20 @@
 import { derive, state } from '@askrjs/askr';
 import { Toggle } from '@askrjs/ui/primitives/toggle';
-import {
-  Button,
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  Grid,
-  Section,
-} from '@askrjs/themes/components';
-import AreaChartExample from '../components/area-chart-example';
-import BarChartExample from '../components/bar-chart-example';
-import FlameGraphExample from '../components/flame-graph-example';
-import DonutChartExample from '../components/donut-chart-example';
-import HeatmapExample from '../components/heatmap-example';
-import LineChartExample from '../components/line-chart-example';
-import ProgressMeterExample from '../components/progress-meter-example';
-import RadialGaugeExample from '../components/radial-gauge-example';
-import SparklineExample from '../components/sparkline-example';
-import StackedBarChartExample from '../components/stacked-bar-chart-example';
-import TimelineExample from '../components/timeline-example';
-import PageHeader from '../components/page-header';
+import { Button } from '@askrjs/themes/controls';
+import { Block, Section } from '@askrjs/themes/layouts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/surfaces';
+import AreaChartExample from '../../components/examples/charts/area-chart-example';
+import BarChartExample from '../../components/examples/charts/bar-chart-example';
+import FlameGraphExample from '../../components/examples/charts/flame-graph-example';
+import DonutChartExample from '../../components/examples/charts/donut-chart-example';
+import HeatmapExample from '../../components/examples/charts/heatmap-example';
+import LineChartExample from '../../components/examples/charts/line-chart-example';
+import ProgressMeterExample from '../../components/examples/charts/progress-meter-example';
+import RadialGaugeExample from '../../components/examples/charts/radial-gauge-example';
+import SparklineExample from '../../components/examples/charts/sparkline-example';
+import StackedBarChartExample from '../../components/examples/charts/stacked-bar-chart-example';
+import TimelineExample from '../../components/examples/charts/timeline-example';
+import PageHeader from '../../components/shared/page-header';
 
 export default function Charts() {
   const scenario = state('launch' as 'launch' | 'scale');
@@ -84,7 +77,7 @@ export default function Charts() {
                 Animate
               </Toggle>
             </div>
-            <Grid minItemWidth="10rem" class="chart-stat-row" gap="3">
+            <Block size="xs" class="chart-stat-row" gap="3">
               <div class="chart-stat">
                 <span class="text-muted">Composite score</span>
                 <strong>{totals().total}</strong>
@@ -93,7 +86,7 @@ export default function Charts() {
                 <span class="text-muted">Usage</span>
                 <strong>{totals().active}</strong>
               </div>
-            </Grid>
+            </Block>
           </CardContent>
         </Card>
       </Section>
@@ -102,7 +95,7 @@ export default function Charts() {
         <div class="chart-reference">
           <section class="chart-contract" data-chart-contract="AreaChart">
             <div class="chart-contract__copy">
-              <p class="page-header-eyebrow">AreaChart</p>
+              <p class="eyebrow">AreaChart</p>
               <h2>Filled trend over ordered points.</h2>
               <p class="text-muted">
                 The filled series should read as continuous movement over time,
@@ -114,7 +107,7 @@ export default function Charts() {
 
           <section class="chart-contract" data-chart-contract="BarChart">
             <div class="chart-contract__copy">
-              <p class="page-header-eyebrow">BarChart</p>
+              <p class="eyebrow">BarChart</p>
               <h2>Discrete category comparison.</h2>
               <p class="text-muted">
                 Bars compare labeled categories with stable tracks and truthful
@@ -126,7 +119,7 @@ export default function Charts() {
 
           <section class="chart-contract" data-chart-contract="LineChart">
             <div class="chart-contract__copy">
-              <p class="page-header-eyebrow">LineChart</p>
+              <p class="eyebrow">LineChart</p>
               <h2>Trend line across an ordered axis.</h2>
               <p class="text-muted">
                 The stroke and connected points are the primary marks; it should
@@ -138,7 +131,7 @@ export default function Charts() {
 
           <section class="chart-contract" data-chart-contract="DonutChart">
             <div class="chart-contract__copy">
-              <p class="page-header-eyebrow">DonutChart</p>
+              <p class="eyebrow">DonutChart</p>
               <h2>Circular part-to-whole composition.</h2>
               <p class="text-muted">
                 Segments share a consistent ring and center void so the total
@@ -150,7 +143,7 @@ export default function Charts() {
 
           <section class="chart-contract" data-chart-contract="StackedBarChart">
             <div class="chart-contract__copy">
-              <p class="page-header-eyebrow">StackedBarChart</p>
+              <p class="eyebrow">StackedBarChart</p>
               <h2>Segmented bars for composition.</h2>
               <p class="text-muted">
                 Each row compares a total while preserving its internal segment
@@ -162,7 +155,7 @@ export default function Charts() {
 
           <section class="chart-contract" data-chart-contract="Sparkline">
             <div class="chart-contract__copy">
-              <p class="page-header-eyebrow">Sparkline</p>
+              <p class="eyebrow">Sparkline</p>
               <h2>Tiny trend for dense UI.</h2>
               <p class="text-muted">
                 The chart stays minimal: no axes, no legend, and no heavy
@@ -174,7 +167,7 @@ export default function Charts() {
 
           <section class="chart-contract" data-chart-contract="Heatmap">
             <div class="chart-contract__copy">
-              <p class="page-header-eyebrow">Heatmap</p>
+              <p class="eyebrow">Heatmap</p>
               <h2>Intensity grid across two dimensions.</h2>
               <p class="text-muted">
                 Equal cells and color intensity carry the meaning while missing
@@ -186,7 +179,7 @@ export default function Charts() {
 
           <section class="chart-contract" data-chart-contract="Timeline">
             <div class="chart-contract__copy">
-              <p class="page-header-eyebrow">Timeline</p>
+              <p class="eyebrow">Timeline</p>
               <h2>Compact ordered events.</h2>
               <p class="text-muted">
                 Milestones should scan as a sequence with bounded rhythm, not as
@@ -198,7 +191,7 @@ export default function Charts() {
 
           <section class="chart-contract" data-chart-contract="FlameGraph">
             <div class="chart-contract__copy">
-              <p class="page-header-eyebrow">FlameGraph</p>
+              <p class="eyebrow">FlameGraph</p>
               <h2>Hierarchical cost rectangles.</h2>
               <p class="text-muted">
                 Width maps to cost and depth maps to hierarchy, with stable
@@ -210,7 +203,7 @@ export default function Charts() {
 
           <section class="chart-contract" data-chart-contract="ProgressMeter">
             <div class="chart-contract__copy">
-              <p class="page-header-eyebrow">ProgressMeter</p>
+              <p class="eyebrow">ProgressMeter</p>
               <h2>Linear progress versus max.</h2>
               <p class="text-muted">
                 A bounded track and proportional fill make the scalar value
@@ -222,7 +215,7 @@ export default function Charts() {
 
           <section class="chart-contract" data-chart-contract="RadialGauge">
             <div class="chart-contract__copy">
-              <p class="page-header-eyebrow">RadialGauge</p>
+              <p class="eyebrow">RadialGauge</p>
               <h2>Circular scalar gauge.</h2>
               <p class="text-muted">
                 The dial shows one value against its max and should not read as
