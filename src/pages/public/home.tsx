@@ -3,7 +3,13 @@ import { BarChart3Icon } from '@askrjs/lucide';
 import { BookOpenIcon } from '@askrjs/lucide';
 import { LayoutTemplateIcon } from '@askrjs/lucide';
 import { Block, Section } from '@askrjs/themes/layouts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/surfaces';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@askrjs/themes/surfaces';
 import FeatureCard from '../../components/examples/home/feature-card';
 import PageHeader from '../../components/shared/page-header';
 import Hero, {
@@ -20,9 +26,7 @@ export default function Home() {
       <Hero>
         <div class="home-hero">
           <div class="home-hero__content">
-            <HeroEyebrow class="eyebrow">
-              Build the app shape first
-            </HeroEyebrow>
+            <HeroEyebrow class="eyebrow">Build the app shape first</HeroEyebrow>
             <HeroTitle>
               Docs, charts, and product pages that already feel like one
               product.
@@ -54,7 +58,9 @@ export default function Home() {
             <CardContent class="home-hero__artifact-grid">
               <div class="home-hero__artifact-item">
                 <strong>Docs</strong>
-                <span>Left-nav guides and component pages under one section.</span>
+                <span>
+                  Left-nav guides and component pages under one section.
+                </span>
               </div>
               <div class="home-hero__artifact-item">
                 <strong>Charts</strong>
@@ -86,7 +92,8 @@ export default function Home() {
             title="Themed app shell"
           >
             Header, container rhythm, section spacing, and footer composition
-            give the product pages a stable frame before individual routes get fancy.
+            give the product pages a stable frame before individual routes get
+            fancy.
           </FeatureCard>
           <FeatureCard icon={<BookOpenIcon size={16} />} title="Docs section">
             Model a believable documentation directory with its own sidebar and
@@ -172,7 +179,8 @@ export default function Home() {
             <h2>Open the docs section, then look at the charts.</h2>
             <p class="text-muted">
               That path shows the product shell first, then the docs layout,
-              then the data surface without making the landing page do all the work.
+              then the data surface without making the landing page do all the
+              work.
             </p>
           </div>
           <div class="home-cta__actions">

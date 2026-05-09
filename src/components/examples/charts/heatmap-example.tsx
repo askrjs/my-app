@@ -1,5 +1,11 @@
 import { Heatmap } from '@askrjs/charts/components';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/surfaces';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@askrjs/themes/surfaces';
 
 type ChartScenario = 'launch' | 'scale';
 

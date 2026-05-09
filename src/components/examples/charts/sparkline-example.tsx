@@ -1,7 +1,13 @@
 import { Sparkline } from '@askrjs/charts/components';
 import { LineChartIcon } from '@askrjs/lucide';
 import { Inline } from '@askrjs/themes/layouts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/surfaces';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@askrjs/themes/surfaces';
 
 type ChartScenario = 'launch' | 'scale';
 

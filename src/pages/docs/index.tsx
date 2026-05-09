@@ -1,8 +1,19 @@
 import { Link } from '@askrjs/askr/router';
-import { ArrowRightIcon, BookOpenIcon, BoxesIcon, SparklesIcon } from '@askrjs/lucide';
+import {
+  ArrowRightIcon,
+  BookOpenIcon,
+  BoxesIcon,
+  SparklesIcon,
+} from '@askrjs/lucide';
 import { Button } from '@askrjs/themes/controls';
-import { Block, Section, Stack } from '@askrjs/themes/layouts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/surfaces';
+import { Block, Section } from '@askrjs/themes/layouts';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@askrjs/themes/surfaces';
 import PageHeader from '../../components/shared/page-header';
 
 export default function DocsHome() {

@@ -3,7 +3,13 @@ import { HamburgerIcon } from '@askrjs/lucide';
 import { Link } from '@askrjs/askr/router';
 import { Container, Flex, Block, Stack } from '@askrjs/themes/layouts';
 import { GitHubLogo } from '@askrjs/themes/logos';
-import { NavBrand, Navbar, NavGroup, NavItem, NavLink } from '@askrjs/themes/navs';
+import {
+  NavBrand,
+  Navbar,
+  NavGroup,
+  NavItem,
+  NavLink,
+} from '@askrjs/themes/navs';
 import { Header } from '@askrjs/themes/shells';
 import { Badge, Separator } from '@askrjs/themes/surfaces';
 import { ThemeToggle } from '@askrjs/themes/theme';
@@ -42,7 +48,7 @@ export default function PublicLayout({ children }: { children?: unknown }) {
               <ThemeToggle
                 variant="ghost"
                 size="icon"
-                toggleThemes={["light", "dark"]}
+                toggleThemes={['light', 'dark']}
                 aria-label="Toggle color theme"
                 lightIcon={<SunIcon size={20} aria-hidden="true" />}
                 darkIcon={<MoonIcon size={20} aria-hidden="true" />}

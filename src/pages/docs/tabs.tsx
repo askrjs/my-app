@@ -1,7 +1,13 @@
 import { BookOpenIcon, LayoutGridIcon, SparklesIcon } from '@askrjs/lucide';
 import { Block, Inline } from '@askrjs/themes/layouts';
 import { Nav, NavLink } from '@askrjs/themes/navs';
-import { Card, CardDescription, CardHeader, CardTitle, Separator } from '@askrjs/themes/surfaces';
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  Separator,
+} from '@askrjs/themes/surfaces';
 
 export default function DocsTabs() {
   return (
@@ -12,13 +18,16 @@ export default function DocsTabs() {
             <LayoutGridIcon size={16} />
             <h2>Tabs Example</h2>
           </Inline>
-          <p>Peer sections where the current route should read like a selected pane.</p>
+          <p>
+            Peer sections where the current route should read like a selected
+            pane.
+          </p>
         </div>
         <Block gap="2">
           <p>
-            The important part is that these links now target real routed partials.
-            The selected tab, the rendered child content, and the URL all move
-            together while the page shell stays shared.
+            The important part is that these links now target real routed
+            partials. The selected tab, the rendered child content, and the URL
+            all move together while the page shell stays shared.
           </p>
           <Nav aria-label="Component pages" variant="tabs">
             <NavLink href="/docs/components" match="exact">
@@ -44,9 +53,9 @@ export default function DocsTabs() {
             <CardHeader>
               <CardTitle>Tabs should express sibling destinations</CardTitle>
               <CardDescription>
-                The page host owns the shared shell while the leaf route owns the
-                selected content. That keeps the registration surface route-shaped
-                instead of closure-shaped.
+                The page host owns the shared shell while the leaf route owns
+                the selected content. That keeps the registration surface
+                route-shaped instead of closure-shaped.
               </CardDescription>
             </CardHeader>
           </Card>

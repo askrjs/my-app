@@ -2,7 +2,13 @@ import { Link } from '@askrjs/askr/router';
 import { ArrowRightIcon } from '@askrjs/lucide';
 import { Button } from '@askrjs/themes/controls';
 import { Block, Section, Stack } from '@askrjs/themes/layouts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/surfaces';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@askrjs/themes/surfaces';
 import PageHeader from '../../components/shared/page-header';
 
 export default function DocsGettingStarted() {
@@ -64,7 +70,8 @@ export default function DocsGettingStarted() {
                 </p>
                 <Button asChild variant="secondary">
                   <Link href="/docs/components">
-                    Open the component docs <ArrowRightIcon size={16} aria-hidden="true" />
+                    Open the component docs{' '}
+                    <ArrowRightIcon size={16} aria-hidden="true" />
                   </Link>
                 </Button>
               </Block>

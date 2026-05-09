@@ -1,6 +1,11 @@
 import { BarChart3Icon, CompassIcon, PaletteIcon } from '@askrjs/lucide';
 import { Block, Section } from '@askrjs/themes/layouts';
-import { Card, CardDescription, CardHeader, CardTitle } from '@askrjs/themes/surfaces';
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@askrjs/themes/surfaces';
 import PageHeader from '../../components/shared/page-header';
 
 export default function About() {
@@ -47,9 +52,7 @@ export default function About() {
           </Card>
           <Card class="about-card" variant="raised">
             <CardHeader>
-              <div class="icon-badge">
-                {<BarChart3Icon size={16} />}
-              </div>
+              <div class="icon-badge">{<BarChart3Icon size={16} />}</div>
               <CardTitle>Real packages</CardTitle>
               <CardDescription>
                 The demos use the actual askr-ui and askr-charts packages from

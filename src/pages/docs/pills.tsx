@@ -1,7 +1,13 @@
 import { BookOpenIcon, LayoutGridIcon, SparklesIcon } from '@askrjs/lucide';
 import { Block, Inline } from '@askrjs/themes/layouts';
 import { Nav, NavLink } from '@askrjs/themes/navs';
-import { Card, CardDescription, CardHeader, CardTitle, Separator } from '@askrjs/themes/surfaces';
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  Separator,
+} from '@askrjs/themes/surfaces';
 
 export default function DocsPills() {
   return (
@@ -12,7 +18,10 @@ export default function DocsPills() {
             <SparklesIcon size={16} />
             <h2>Pills Example</h2>
           </Inline>
-          <p>Route-aware pills work best when they describe real subsection pages.</p>
+          <p>
+            Route-aware pills work best when they describe real subsection
+            pages.
+          </p>
         </div>
         <Block gap="2">
           <p>
@@ -44,8 +53,8 @@ export default function DocsPills() {
             <CardHeader>
               <CardTitle>Pills should describe real subsection state</CardTitle>
               <CardDescription>
-                The route table stays declarative while the repeated docs framing
-                disappears into the page host.
+                The route table stays declarative while the repeated docs
+                framing disappears into the page host.
               </CardDescription>
             </CardHeader>
           </Card>

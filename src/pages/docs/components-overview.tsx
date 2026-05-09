@@ -35,7 +35,8 @@ export default function ComponentsOverview() {
               <h2>Accordion</h2>
             </Inline>
             <p>
-              A lightweight disclosure pattern for page-level explanation without adding another surface.
+              A lightweight disclosure pattern for page-level explanation
+              without adding another surface.
             </p>
           </div>
           <Accordion type="single" collapsible>
