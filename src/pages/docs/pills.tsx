@@ -49,7 +49,7 @@ export default function DocsPills() {
               </Inline>
             </NavLink>
           </Nav>
-          <Card variant="outline">
+          <Card>
             <CardHeader>
               <CardTitle>Pills should describe real subsection state</CardTitle>
               <CardDescription>

@@ -16,7 +16,7 @@ export default function Components() {
 
       <Section key="components-examples">
         <Block size="md" gap="6">
-          <Outlet />
+          {Outlet()}
         </Block>
       </Section>
     </>

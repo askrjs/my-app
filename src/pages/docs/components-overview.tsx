@@ -6,9 +6,9 @@ import {
   AccordionHeader,
   AccordionItem,
   AccordionTrigger,
-} from '@askrjs/ui/composites/accordion';
-import { Input } from '@askrjs/ui/primitives/input';
-import { Toggle } from '@askrjs/ui/primitives/toggle';
+  Input,
+  Toggle,
+} from '@askrjs/ui';
 import { LayoutGridIcon, ListIcon, ToggleLeftIcon } from '@askrjs/lucide';
 import { Block, Inline } from '@askrjs/themes/layouts';
 import { Button } from '@askrjs/themes/controls';

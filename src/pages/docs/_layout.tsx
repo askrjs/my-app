@@ -1,5 +1,5 @@
 import { Link } from '@askrjs/askr/router';
-import { BookOpenIcon, BoxesIcon, SparklesIcon } from '@askrjs/lucide';
+import { BookOpenIcon, BoxesIcon, PanelLeftIcon, SparklesIcon } from '@askrjs/lucide';
 import { Container } from '@askrjs/themes/layouts';
 import { NavBrand, Navbar, NavGroup, NavLink } from '@askrjs/themes/navs';
 import { Shell, ShellMain, ShellNav } from '@askrjs/themes/shells';
@@ -23,9 +23,19 @@ export default function DocsLayout({ children }: { children?: unknown }) {
   return (
     <Shell variant="sidebar">
       <ShellNav>
-        <Navbar orientation="vertical" aria-label="Docs navigation">
+        <Navbar
+          orientation="vertical"
+          collapsible="icon"
+          collapseBelow="md"
+          collapseLabel="Docs navigation"
+          collapseTrigger={<PanelLeftIcon size={20} aria-hidden="true" />}
+          aria-label="Docs navigation"
+        >
           <NavBrand>
             <Link href="/">
+              <span data-slot="icon" aria-hidden="true">
+                A
+              </span>
               <strong>Askr</strong>
             </Link>
           </NavBrand>

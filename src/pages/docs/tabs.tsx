@@ -49,7 +49,7 @@ export default function DocsTabs() {
               </Inline>
             </NavLink>
           </Nav>
-          <Card variant="outline">
+          <Card>
             <CardHeader>
               <CardTitle>Tabs should express sibling destinations</CardTitle>
               <CardDescription>

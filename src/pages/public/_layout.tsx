@@ -37,7 +37,7 @@ export default function PublicLayout({ children }: { children?: unknown }) {
               <NavLink href="/charts">Charts</NavLink>
               <NavLink href="/about">About</NavLink>
             </NavGroup>
-            <NavGroup align="end">
+            <NavGroup align="end" includeInMobile>
               <NavItem
                 href="https://github.com/askrjs"
                 aria-label="GitHub repository"

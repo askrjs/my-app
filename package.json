@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "prebuild": "npm run build --prefix ../askr-ui",
     "dev": "vp dev",
     "build": "vp build",
     "preview": "vp preview",

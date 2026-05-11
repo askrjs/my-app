@@ -1,5 +1,5 @@
 import { derive, state } from '@askrjs/askr';
-import { Toggle } from '@askrjs/ui/primitives/toggle';
+import { Toggle } from '@askrjs/ui';
 import { Button } from '@askrjs/themes/controls';
 import { Block, Section } from '@askrjs/themes/layouts';
 import {
