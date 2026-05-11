@@ -1,5 +1,4 @@
 import { MoonIcon, SunIcon } from '@askrjs/lucide';
-import { HamburgerIcon } from '@askrjs/lucide';
 import { Link } from '@askrjs/askr/router';
 import { Container, Flex, Block, Stack } from '@askrjs/themes/layouts';
 import { GitHubLogo } from '@askrjs/themes/logos';
@@ -23,9 +22,6 @@ export default function PublicLayout({ children }: { children?: unknown }) {
         <Container>
           <Navbar
             aria-label="Primary"
-            collapseBelow="md"
-            collapseLabel="Primary navigation"
-            collapseTrigger={<HamburgerIcon size={20} aria-hidden="true" />}
           >
             <NavBrand>
               <Link href="/">
@@ -37,7 +33,7 @@ export default function PublicLayout({ children }: { children?: unknown }) {
               <NavLink href="/charts">Charts</NavLink>
               <NavLink href="/about">About</NavLink>
             </NavGroup>
-            <NavGroup align="end" includeInMobile>
+            <NavGroup align="end">
               <NavItem
                 href="https://github.com/askrjs"
                 aria-label="GitHub repository"

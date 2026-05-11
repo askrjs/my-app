@@ -42,6 +42,7 @@ export default function ProgressMeterExample({
           value={value}
           summary="A compact progress meter for release readiness."
           description="Tracks completion for the current scenario."
+          variant={scenario === 'launch' ? 'warning' : 'success'}
         />
       </CardContent>
     </Card>

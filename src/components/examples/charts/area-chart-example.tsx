@@ -54,6 +54,7 @@ export default function AreaChartExample({
           animate={animate}
           label="Monthly trend"
           summary="A compact area chart showing monthly activity."
+          showGrid
           data={scenario === 'launch' ? launchArea : scaleArea}
         />
       </CardContent>

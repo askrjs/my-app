@@ -54,6 +54,7 @@ export default function LineChartExample({
           animate={animate}
           label="Weekly trend"
           summary="A compact line chart showing weekly activity."
+          showGrid
           data={scenario === 'launch' ? launchLine : scaleLine}
         />
       </CardContent>

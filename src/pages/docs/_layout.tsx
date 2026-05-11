@@ -2,7 +2,7 @@ import { Link } from '@askrjs/askr/router';
 import { BookOpenIcon, BoxesIcon, PanelLeftIcon, SparklesIcon } from '@askrjs/lucide';
 import { Container } from '@askrjs/themes/layouts';
 import { NavBrand, Navbar, NavGroup, NavLink } from '@askrjs/themes/navs';
-import { Shell, ShellMain, ShellNav } from '@askrjs/themes/shells';
+import { Sidebar, SidebarPanel, Shell, ShellMain, ShellNav } from '@askrjs/themes/shells';
 
 const docsLinks = [
   {
@@ -19,39 +19,51 @@ const docsLinks = [
   { href: '/docs/components', label: 'Components', icon: BoxesIcon },
 ];
 
+function renderDocsBrand() {
+  return (
+    <NavBrand>
+      <Link href="/">
+        <span data-slot="icon" aria-hidden="true">
+          A
+        </span>
+        <strong>Askr</strong>
+      </Link>
+    </NavBrand>
+  );
+}
+
+function renderDocsGuides() {
+  return (
+    <NavGroup label="Guides">
+      {docsLinks.map((item) => {
+        const Icon = item.icon;
+
+        return (
+          <NavLink key={item.href} href={item.href} match={item.match}>
+            <Icon size={16} aria-hidden="true" />
+            <span>{item.label}</span>
+          </NavLink>
+        );
+      })}
+    </NavGroup>
+  );
+}
+
 export default function DocsLayout({ children }: { children?: unknown }) {
   return (
     <Shell variant="sidebar">
       <ShellNav>
-        <Navbar
-          orientation="vertical"
-          collapsible="icon"
+        <Sidebar
+          aria-label="Docs navigation"
           collapseBelow="md"
+          collapsible="icon"
           collapseLabel="Docs navigation"
           collapseTrigger={<PanelLeftIcon size={20} aria-hidden="true" />}
-          aria-label="Docs navigation"
         >
-          <NavBrand>
-            <Link href="/">
-              <span data-slot="icon" aria-hidden="true">
-                A
-              </span>
-              <strong>Askr</strong>
-            </Link>
-          </NavBrand>
-          <NavGroup label="Guides">
-            {docsLinks.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <NavLink key={item.href} href={item.href} match={item.match}>
-                  <Icon size={16} aria-hidden="true" />
-                  <span>{item.label}</span>
-                </NavLink>
-              );
-            })}
-          </NavGroup>
-        </Navbar>
+          {renderDocsBrand()}
+          {renderDocsGuides()}
+          <SidebarPanel brand={renderDocsBrand()}>{renderDocsGuides()}</SidebarPanel>
+        </Sidebar>
       </ShellNav>
 
       <ShellMain>

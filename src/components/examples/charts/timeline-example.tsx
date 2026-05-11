@@ -1,3 +1,4 @@
+import type { TimelineDatum } from '@askrjs/charts/components';
 import { Timeline } from '@askrjs/charts/components';
 import { TimelineIcon } from '@askrjs/lucide';
 import { Inline } from '@askrjs/themes/layouts';
@@ -16,39 +17,45 @@ type TimelineExampleProps = {
   scenario: ChartScenario;
 };
 
-const launchTimeline = [
+const launchTimeline: readonly TimelineDatum[] = [
   {
     label: 'Kickoff',
     value: 'Week 1',
     description: 'Start with a narrow scope.',
+    status: 'success',
   },
   {
     label: 'Prototype',
     value: 'Week 2',
     description: 'Get the first pass on screen.',
+    status: 'warning',
   },
   {
     label: 'Pilot',
     value: 'Week 3',
     description: 'Validate the flow with users.',
+    status: 'info',
   },
 ];
 
-const scaleTimeline = [
+const scaleTimeline: readonly TimelineDatum[] = [
   {
     label: 'Kickoff',
     value: 'Week 1',
     description: 'Start with a narrow scope.',
+    status: 'success',
   },
   {
     label: 'Prototype',
     value: 'Week 2',
     description: 'Get the first pass on screen.',
+    status: 'warning',
   },
   {
     label: 'Rollout',
     value: 'Week 4',
     description: 'Broaden the surface carefully.',
+    status: 'danger',
   },
 ];
 

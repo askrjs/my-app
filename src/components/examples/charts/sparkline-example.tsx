@@ -54,6 +54,7 @@ export default function SparklineExample({
           animate={animate}
           label="Signal trend"
           summary="A compact sparkline showing signal movement."
+          variant="line"
           data={scenario === 'launch' ? launchSparkline : scaleSparkline}
         />
       </CardContent>

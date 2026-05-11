@@ -42,6 +42,7 @@ export default function RadialGaugeExample({
           value={value}
           summary="A compact radial gauge showing readiness."
           description="Tracks readiness for the current scenario."
+          variant={scenario === 'launch' ? 'danger' : 'success'}
         />
       </CardContent>
     </Card>
