@@ -1,17 +1,17 @@
-import { MoonIcon, SunIcon } from '@askrjs/lucide';
-import { Link } from '@askrjs/askr/router';
-import { Container, Flex, Block, Stack } from '@askrjs/themes/layouts';
-import { GitHubLogo } from '@askrjs/themes/logos';
+import { MoonIcon, SunIcon } from "@askrjs/lucide";
+import { Link } from "@askrjs/askr/router";
+import { Container, Flex, Block, Stack } from "@askrjs/themes/layouts";
+import { GitHubLogo } from "@askrjs/themes/logos";
 import {
   NavBrand,
   Navbar,
   NavGroup,
   NavItem,
   NavLink,
-} from '@askrjs/themes/navs';
-import { Header } from '@askrjs/themes/shells';
-import { Badge, Separator } from '@askrjs/themes/surfaces';
-import { ThemeToggle } from '@askrjs/themes/theme';
+} from "@askrjs/themes/navs";
+import { Header } from "@askrjs/themes/shells";
+import { Badge, Separator } from "@askrjs/themes/surfaces";
+import { ThemeToggle } from "@askrjs/themes/theme";
 
 export default function PublicLayout({ children }: { children?: unknown }) {
   const year = new Date().getFullYear();
@@ -20,9 +20,7 @@ export default function PublicLayout({ children }: { children?: unknown }) {
     <>
       <Header position="sticky">
         <Container>
-          <Navbar
-            aria-label="Primary"
-          >
+          <Navbar id="public-navbar" breakpoint="lg" aria-label="Primary">
             <NavBrand>
               <Link href="/">
                 <strong>Askr</strong>
@@ -44,7 +42,7 @@ export default function PublicLayout({ children }: { children?: unknown }) {
               <ThemeToggle
                 variant="ghost"
                 size="icon"
-                toggleThemes={['light', 'dark']}
+                themes={["light", "dark"]}
                 aria-label="Toggle color theme"
                 lightIcon={<SunIcon size={20} aria-hidden="true" />}
                 darkIcon={<MoonIcon size={20} aria-hidden="true" />}
