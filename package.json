@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "prebuild": "npm run build --prefix ../askr-ui",
     "dev": "vp dev",
     "build": "vp build",
     "preview": "vp preview",
@@ -14,19 +13,19 @@
     "fmt": "vp fmt \"src/**/*.{ts,tsx,css}\" \"tests/**/*.{ts,tsx}\" \"*.md\""
   },
   "dependencies": {
-    "@askrjs/askr": "file:../askr",
-    "@askrjs/charts": "file:../askr-charts",
-    "@askrjs/lucide": "file:../askr-lucide",
+    "@askrjs/askr": "0.0.37",
+    "@askrjs/charts": "0.0.1",
+    "@askrjs/lucide": "0.0.1",
     "@askrjs/themes": "file:../askr-themes",
-    "@askrjs/ui": "file:../askr-ui",
+    "@askrjs/ui": "0.0.7",
     "playwright": "^1.60.0"
   },
   "devDependencies": {
-    "@askrjs/vite": "file:../askr-vite",
-    "@types/node": "^25.7.0",
+    "@askrjs/vite": "0.0.2",
+    "@types/node": "^25.9.0",
     "jiti": "^2.7.0",
     "jsdom": "^29.1.1",
     "typescript": "^6.0.3",
-    "vite-plus": "^0.1.20"
+    "vite-plus": "^0.1.21"
   }
 }
