@@ -1,4 +1,4 @@
-import { createSPA } from '@askrjs/askr';
+import { createSPA } from '@askrjs/askr/boot';
 import { getRoutes, navigate } from '@askrjs/askr/router';
 
 import './styles.css';
@@ -17,7 +17,7 @@ async function bootstrap(): Promise<void> {
     await import('./styles/app-custom.css');
   }
 
-  createSPA({
+  await createSPA({
     root: document.getElementById('app')!,
     routes: getRoutes(),
   });

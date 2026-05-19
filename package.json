@@ -6,12 +6,16 @@
     "dev": "vp dev",
     "build": "vp build",
     "preview": "vp preview",
-    "test": "vp test run",
+    "test": "npm run test:unit && npm run test.jsdom && npm run test.browser",
+    "test:unit": "vp test run -c vitest.test.unit.config.ts",
+    "test.jsdom": "vp test run -c vitest.test.jsdom.config.ts",
+    "test.browser": "vp test run -c vitest.test.browser.config.ts",
     "type-check": "tsc --noEmit",
-    "lint": "vp lint src tests",
+    "lint": "vp lint .",
     "lint:fix": "vp lint --fix src tests",
-    "fmt": "vp fmt \"src/**/*.{ts,tsx,css}\" \"tests/**/*.{ts,tsx}\" \"*.md\""
+    "fmt": "vp fmt ."
   },
+  "packageManager": "npm@11.14.1",
   "dependencies": {
     "@askrjs/askr": "0.0.37",
     "@askrjs/charts": "0.0.1",

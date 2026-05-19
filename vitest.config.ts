@@ -1,18 +1,25 @@
 ﻿import { defineConfig } from 'vite-plus';
-import { askr } from '@askrjs/vite';
+import { askrFoundationsShim, askrRootShim } from './vite.aliases';
 
 export default defineConfig({
-  plugins: [askr()],
-  esbuild: {
-    jsx: 'automatic',
-    jsxImportSource: '@askrjs/askr',
-  },
   test: {
-    environment: 'jsdom',
-    globals: true,
-    coverage: {
-      reporter: ['text', 'json', 'html'],
-    },
+    projects: [
+      './vitest.test.unit.config.ts',
+      './vitest.test.jsdom.config.ts',
+      './vitest.test.browser.config.ts',
+    ],
+  },
+  resolve: {
+    alias: [
+      {
+        find: /^@askrjs\/askr$/,
+        replacement: askrRootShim,
+      },
+      {
+        find: /^@askrjs\/askr\/foundations$/,
+        replacement: askrFoundationsShim,
+      },
+    ],
   },
 });
 
